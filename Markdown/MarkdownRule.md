@@ -110,9 +110,9 @@ _이텔릭_
 <br/>
 
 ## 이미지(Images)
-_이미지 출력_
-![대체 텍스트](https://avatars.githubusercontent.com/u/67949100?v=4)
-__이미지 연결 링크 출력__
+_이미지 출력_ <br/>
+![대체 텍스트](https://avatars.githubusercontent.com/u/67949100?v=4) <br/>
+__이미지 연결 링크 출력__ <br/>
 [![대체 텍스트](https://avatars.githubusercontent.com/u/67949100?v=4)](https://github.com/hiro961227/Dev-Docs)
 
 ```plaintext
