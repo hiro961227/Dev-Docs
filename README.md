@@ -1,8 +1,8 @@
-﻿![header](https://capsule-render.vercel.app/api?type=waving&color=0:CDF1F2,100:F4D1F5&height=200&text=KaeunKim&fontColor=040B24&fontSize=80&fontAlign=75&fontAlignY=35&desc=공부하고,%20찾아보고,%20작업한%20것을%20기록하는%20곳&descSize=16&descAlign=50&descAlignY=84)
+﻿![header](https://capsule-render.vercel.app/api?type=waving&color=0:CDF1F2,100:F4D1F5&height=200&text=KaeunKim&fontColor=040B24&fontSize=80&fontAlign=75&fontAlignY=35&desc=공부하고,%20찾아보고,%20작업한%20것을%20기록하는%20곳&descSize=14&descAlign=50&descAlignY=84)
 
-<p align="center" style="color: 040B24; font-weight: bold;">
+<p align="center" style="color: #040B24; font-weight: bold;">
 ✒️ Tech Stack 📖
-</p> <br/><br/>
+</p>
 <div align="center">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>&nbsp
   <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=SASS&logoColor=white"/></a>&nbsp
