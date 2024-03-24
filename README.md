@@ -5,7 +5,7 @@
   * [Profile](https://github.com/hiro961227/Dev-Docs/blob/main/Profile.md)
 * [Experience](https://github.com/hiro961227/Dev-Docs/tree/main?tab=readme-ov-file#experience)
 * [Tech Stack](https://github.com/hiro961227/Dev-Docs/tree/main?tab=readme-ov-file#tech-stack)
-* [My-Projects](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects)
+* [My-Projects](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#readme)
 * [Study](https://github.com/hiro961227/Dev-Docs/tree/main/Study-Docs)
 
 ## [Profile](https://github.com/hiro961227/Dev-Docs/blob/main/Profile.md)
