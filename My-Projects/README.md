@@ -6,20 +6,20 @@
     1. [Kelloggs 클론 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#1-2-kelloggs-%ED%81%B4%EB%A1%A0-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
     1. [개인 포트폴리오](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#1-3-%EA%B0%9C%EC%9D%B8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)
 1. [트랜스코스모스코리아](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#3-%ED%8A%B8%EB%9E%9C%EC%8A%A4%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8A%A4%EC%BD%94%EB%A6%AC%EC%95%84)
-    1. D바라이 안내사항 페이지 제작
-    1. D바라이 이벤트 페이지 제작
-    1. D Point Club 이벤트 페이지 제작
-    1. Parasonic 신규 페이지 제작
-    1. Suntory 중국어 페이지 제작
-    1. Suntory hall 2022페이지 제작
-    1. Suntory Liqueur&Cocktail 페이지 제작
-    1. Suntory hall 이벤트 페이지 제작
+    1. [D바라이 안내사항 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-1-d%EB%B0%94%EB%9D%BC%EC%9D%B4-%EC%95%88%EB%82%B4%EC%82%AC%ED%95%AD-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
+    1. [D바라이 이벤트 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-2-d%EB%B0%94%EB%9D%BC%EC%9D%B4-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
+    1. [D Point Club 이벤트 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-3-d-point-club-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
+    1. [Parasonic 신규 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-4-parasonic-%EC%8B%A0%EA%B7%9C-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
+    1. [Suntory 중국어 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-5-suntory-%EC%A4%91%EA%B5%AD%EC%96%B4-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
+    1. [Suntory hall 2022페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-6-suntory-hall-2022%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
+    1. [Suntory Liqueur&Cocktail 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-7-suntory-liqueurcocktail-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
+    1. [Suntory hall 이벤트 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#2-8-suntory-hall-%EC%9D%B4%EB%B2%A4%ED%8A%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%A0%9C%EC%9E%91)
 1. [개인 포트폴리오](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#4-%EA%B0%9C%EC%9D%B8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)
 
 1. [프리아이브](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#3-%ED%94%84%EB%A6%AC%EC%95%84%EC%9D%B4%EB%B8%8C)
-    1. 카카오 브레인 어드민 페이지 제작
-    1. 라이나 생명 프로젝트
-    1. 롯데 렌터카 어드민 페이지 제작
+    1. [카카오 브레인 어드민 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#4-1-카카오-브레인-어드민-페이지)
+    1. [라이나 생명 프로젝트](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#4-2-라이나-생명-프로젝트)
+    1. [롯데 렌터카 어드민 페이지 제작](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#4-3-롯데-렌터카-어드민-페이지-제작)
 1. [개인 포트폴리오](https://github.com/hiro961227/Dev-Docs/tree/main/My-Projects#6-%EA%B0%9C%EC%9D%B8-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4)
     1. Golden Disc Awards 클론 페이지 제작
 
@@ -66,8 +66,6 @@
 간단한 안내 페이지로 공통된 css/js파츠를 이용하여 적용하였습니다. 주어진 파츠를 사용하여 디자인과 맞추어 작업할 수 있는 경험이었습니다. <br/>
 공통된 파츠와 전 이벤트 페이지에서 사용하고 있는 css이다보니 별도의 클래스 태그를 주거나 하는 데 있어 팀원 내 의사소통이 필요했던 작업이었습니다.
 
-<br />
-
 ### 2-2. D바라이 이벤트 페이지 제작
 * <a href="https://service.smt.docomo.ne.jp/keitai_payment/campaign/dpay_point_No12/2201/cpn_200p.html" target="_blank">사이트 보러가기</a>
 * 작업 기여도: 100%
@@ -79,8 +77,6 @@
 기존에 사용하는 공통 아코디언과 추종 버튼 js태그 이외, 파라미터 내의 자료를 받아와 화면에 송출하는 작업을 해 볼 수 있는 페이지였습니다. <br/>
 파라미터를 받아와 제대로 입력 되어있는지 판정 후 화면에 송출하도록 태그를 작성하여, 파라미터의 startdate&enddate 데이터 내에 날짜 8자리를 기입하면 적용 기간이 나오도록 설정하였으며, 날짜가 기입되지 않은 경우 30일 내 적용된다는 코멘트를 기입하여 파라미터 정보를 활용한 코드를 작성하였습니다.
 
-<br />
-
 ### 2-3. D Point Club 이벤트 페이지 제작
 * <a href="https://dpoint.docomo.ne.jp/cp_3/yoshimoto_densetsu/index.html" target="_blank">사이트 보러가기</a>
 * 작업 기여도: 100%
@@ -89,8 +85,6 @@
 
 일본 내 극단과 d point 콜라보로 진행되었던 이벤트 페이지입니다. <br/>
 제작된 디자인에 맞추어 작업을 하였으며, 앵커이동 및 출연진 이미지 팝업과 slick.js라이브러리를 이용한 슬라이더, 탭 이동 등 여러 jQuery 코드를 응용할 수 있던 페이지였습니다.
-
-<br />
 
 ### 2-4. Parasonic 신규 페이지 제작
 * <a href="https://sumai.panasonic.jp/lighting/eakariplus_top/" target="_blank">사이트 보러가기</a> | <a href="https://sumai.panasonic.jp/lighting/eakariplus/flow" target="_blank">사이트 보러가기</a>
@@ -101,18 +95,14 @@
 일본 기업 Panasonic의 e+あかり플랜 페이지의 리뉴얼 제작의 기본 베이스 코딩을 함께 진행했습니다. <br/>
 XD파일로 받은 디자인에 맞추어 퍼블리싱 코딩을 작업하면 이후 백엔드 기술자분이 기능을 추가하는 형식으로 처음 경험해보는 팀 프로젝트였습니다.
 
-<br />
-
 ### 2-5. Suntory 중국어 페이지 제작
-* <a href="" target="_blank">사이트 보러가기</a>
+* <a href="https://www.suntory.cn/cn/what_we_do/our_sustainability/water.html" target="_blank">사이트 보러가기</a> | <a href="https://www.suntory.cn/cn/what_we_do/our_sustainability/low_carbon.html" target="_blank">사이트 보러가기</a> | <a href="https://www.suntory.cn/cn/what_we_do/our_sustainability/pet.html" target="_blank">사이트 보러가기</a> | <a href="https://www.suntory.cn/cn/what_we_do/our_sustainability/policy.html" target="_blank">사이트 보러가기</a>
 * 작업 기여도: 100%
 * 작성 언어:
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>  <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=white"/>
 
 일본 기업 Suntory 홈페이지의 중국어 페이지를 제작하였습니다. <br/>
 리뉴얼에 참여하였던 일본어 버전 사이트의 코드를 가져와 중국어로 변환된 파일의 코드 변경 및 이미지 교체 작업을 진행하였습니다.
-
-<br />
 
 ### 2-6. Suntory hall 2022페이지 제작
 * <a href="https://www.suntory.co.jp/suntoryhall/feature/chamber2022/index.html" target="_blank">사이트 보러가기</a> | <a href="https://www.suntory.co.jp/suntoryhall/feature/chamber2022/profile/index.html" target="_blank">사이트 보러가기</a> | <a href="https://www.suntory.co.jp/suntoryhall/feature/chamber2022/topics/index.html" target="_blank">사이트 보러가기</a>
@@ -123,8 +113,6 @@ XD파일로 받은 디자인에 맞추어 퍼블리싱 코딩을 작업하면 �
 일본 기업 Suntory 홈페이지의 Suntory hall 이벤트 페이지의 2022버전을 제작하였습니다.<br />
 이미지가 많은 페이지였던만큼 jpg의 용량도 최소한으로 조정하였으며 webp파일을 이용하여 로딩에 조금 더 가속을 붙였습니다. 텍스트로 작업 가능한 부분은 전부 순수 html,css를 이용하여 작성되었습니다.
 
-<br />
-
 ### 2-7. Suntory Liqueur&Cocktail 페이지 제작
 * <a href="https://www.suntory.co.jp/wnb/index.html" target="_blank">사이트 보러가기</a> | <a href="https://www.suntory.co.jp/wnb/guide/index.html" target="_blank">사이트 보러가기</a>
 * 작업 기여도: 100%
@@ -133,8 +121,6 @@ XD파일로 받은 디자인에 맞추어 퍼블리싱 코딩을 작업하면 �
 
 일본 기업 Suntory 홈페이지의 Liqueur&Cocktail 이벤트 페이지를 제작하였습니다. <br />
 급하게 투입되었던 프로젝트로 디자인 변경 및 요구사항이 픽스되지 않아 작업하며 수정이 자주 들어왔던 프로젝트였습니다. pc와 sp의 백그라운드 변화로 인해 반응형에 조금 더 신경 쓸 수 있었던 프로젝트였습니다.
-
-<br />
 
 ### 2-8. Suntory hall 이벤트 페이지 제작
 * <a href="https://www.suntory.co.jp/suntoryhall/feature/bso2022/index.html" target="_blank">사이트 보러가기</a>
@@ -161,6 +147,29 @@ XD파일로 받은 디자인에 맞추어 퍼블리싱 코딩을 작업하면 �
 
 ## 4. 프리아이브
 > 2022.12-2023.10
+### 4-1. 카카오 브레인 어드민 페이지 제작
+* 작업 기여도: 20%
+* 작성 언어:
+<img src="https://img.shields.io/badge/VUE-4FC08D?style=flat-square&logo=vuedotjs&logoColor=black"/> <img src="https://img.shields.io/badge/quasar-050A14?style=flat-square&logo=quasar&logoColor=white"/> <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=SASS&logoColor=white"/>
+
+입사 후 처음 들어간 vue3 프로젝트였습니다. quasar를 이용하여 커스텀된 공통 태그와 공통 component 구조를 제공받아 사용하였으며 style scoped 속성을 이용하여 단일 페이지의 sass를 이용해 공통 요소를 건드는 일 없도록 작업하는 등 퍼블리셔로서 처음 경험해보는 팀 프로젝트였습니다.
+
+### 4-2. 라이나 생명 프로젝트
+* <a href="https://www.lina.co.kr/product/easy" target="_blank">사이트 보러가기</a> | <a href="https://www.lina.co.kr/customer/required" target="_blank">사이트 보러가기</a> | <a href="https://www.lina.co.kr/service/diagnosis/guide" target="_blank">사이트 보러가기</a>
+* 작업 기여도: 15%
+* 작성 언어:
+<img src="https://img.shields.io/badge/VUE-4FC08D?style=flat-square&logo=vuedotjs&logoColor=black"/>  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/> Element UI
+
+헬프로 보충 투입된 프로젝트였습니다. vue2를 사용하여 기존 사용하던 vue3와의 차이점을 경험할 수 있었으며, 100명이 넘는 인원이 투입된 대규모 프로젝트를 처음 경험해 볼 수 있는 기회였습니다. <br/>
+프로젝트의 막바지에 들어가, 수정된 디자인 변경과 접근성 요소를 검사하는 업무에 배정받아 해당 프로젝트에서 웹접근성에 알맞는 디자인 요소, aria- 요소를 사용해야 하는 경우 등을 배울 수 있는 경험이었습니다.
+
+### 4-3. 롯데 렌터카 어드민 페이지 제작
+* 작업 기여도: 50%
+* 작성 언어:
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/> <img src="https://img.shields.io/badge/Sass-CC6699?style=flat-square&logo=SASS&logoColor=white"/> <img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jQuery&logoColor=white"/>
+
+중도 투입된 프로젝트로 직원들이 사용하는 홈페이지의 어드민 페이지 퍼블리싱 작업을 담당하였습니다. <br/>
+jquery를 이용하여 조직도의 api를 불러오는 구조 작성 및 공통 table요소 작업, 공통 팝업 작업 및 별점 value 추출 작업 등을 하며 데이터를 다루는 경험을 할 수 있었습니다.
 
 <br />
 
