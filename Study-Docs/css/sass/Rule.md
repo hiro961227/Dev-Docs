@@ -62,3 +62,46 @@
   font-size: 1rem;
 }
 ```
+___
+
+## @for
+### @for $var from (start number) to (end number) { ... }
+> from ~to 의 경우 **미만**의 반복 값을 사용함
+```css
+/* sass */
+@for $i from 1 to 3{
+  .icon_#{ $i }{
+    background-position: 0 ($i * -10px);
+  }
+}
+
+/* css */
+.icon_1{background-position: 0 -10px;}
+.icon_2{background-position: 0 -20px;}
+```
+
+
+### @for $var from (start number) through (end number) { ... }
+> from ~to 의 경우 **이하**의 반복 값을 사용함
+```css
+/* sass */
+li{
+  @for $i from 1 to 3{
+    &:nth-last-child(#{$i}),
+    &:nth-last-child(#{$i}) ~ li{
+      width: calc(100%/ #{$i});
+    }
+  }
+}
+
+/* css */
+li:nth-last-child(1), li:nth-last-child(1) ~ li {
+  width: calc(100% / 1);
+}
+li:nth-last-child(2), li:nth-last-child(2) ~ li {
+  width: calc(100% / 2);
+}
+li:nth-last-child(3), li:nth-last-child(3) ~ li {
+  width: calc(100% / 3);
+}
+```
