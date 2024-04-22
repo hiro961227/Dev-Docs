@@ -105,3 +105,53 @@ li:nth-last-child(3), li:nth-last-child(3) ~ li {
   width: calc(100% / 3);
 }
 ```
+
+## @use
+> dart-sass에서 사용 가능한 함수, 네임스페이스를 생성하여 전역으로 사용되던 import의 문제점을 보완 가능
+> @use를 사용하여 가져온 스타일시트를 ```모듈(modules)```이라 부름
+
+### 기본 형식
+```css
+//test.scss
+$radius: 3px;
+@mixin rounded{
+  border-radius: $radius;
+}
+
+//style.scss
+@use "/test";
+
+.button{
+  @include test.rounded;
+  padding: 5px + tset.$radius;
+}
+
+//style.css
+.button{
+  border-radius: 3px;
+  padding: 8px;
+}
+```
+
+### 네임스페이스 선택
+```css
+//test.scss
+$radius: 3px;
+@mixin rounded{
+  border-radius: $radius;
+}
+
+//style.scss
+@use "/test" as t;
+
+.button{
+  @include t.rounded;
+  padding: 5px + t.$radius;
+}
+
+//style.css
+.button{
+  border-radius: 3px;
+  padding: 8px;
+}
+```
