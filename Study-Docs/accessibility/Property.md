@@ -78,7 +78,7 @@ token | note
 * 이미지를 사용해 시각적인 표현을 할 경우 대체 텍스트 역할
 
 ```html
-<div role="text" class="text-area" tabindex="0" aria-label="필요한 금액: 무료">
+<div role="text" class="text-area" tabindex="0" aria-label="필요한 금액: 100원">
   <p aria-hidden="true"><strong>필요한 금액</strong></p>
   <p aria-hidden="true"><strong class="txt-blue">100</strong>원</p>
 </div>
@@ -97,8 +97,6 @@ token | note
 * 컨트롤과 연관된 라벨: 버튼이나 입력 필드와 같은 컨트롤에 대한 설명 제공
 
 ```html
-
-<br/>
 <button id="schedule-button">스케줄 조회</button>
 <div id="schedule-info" aria-labelledby="schedule-button">
     이 버튼을 클릭하여 스케줄을 조회할 수 있습니다.
