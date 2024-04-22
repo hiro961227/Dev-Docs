@@ -11,7 +11,7 @@
 
 <br/>
 
-## 속성 - Property
+## [속성 - Property](Study-Docs/accessibility/Property.md)
 > 해당 요소의 특징이나 상황 정리. ```aria-``` 라는 접두사 사용
 
 <br/>
