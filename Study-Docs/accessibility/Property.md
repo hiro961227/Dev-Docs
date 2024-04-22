@@ -1,6 +1,18 @@
 # 요소의 속성
+## Table of Contents
+1. [aria-live](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-live)
+2. [aria-roledescription](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-roledescription)
+3. [aria-controls](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-controls)
+4. [aria-lable](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-lable)
+5. [aria-labelledby](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-labelledby)
 
-## aria-live
+<br/>
+
+___
+
+<br/>
+
+### aria-live
 >  사용자들에게 새로운 콘텐츠나 상태 변경을 실시간으로 알려주는 데 사용
 > 특정한 영역이나 엘리먼트가 업데이트되는 경우, 그 변경사항을 즉시 알려주는 역할
 
@@ -22,7 +34,9 @@ token | note
 </div>
 ```
 
-## aria-roleDescription
+<br/>
+
+### aria-roleDescription
 > 요소의 역할(role)을 커스터마이징 하여 전달함, **정해진 요소의 역할을 더 명확하게 만드는 데 사용**
 
 * 역할 설명에 대한 속성, 장문의 설명이 아닌 **요소의 역할을 명확하게 세분화**하기 위해 사용. 요소의 의미를 무시하고 덮어씌움
@@ -36,7 +50,9 @@ token | note
 <a href="...." aria-roledescription="Banner link"> 가을 난방 30% 할인 </a>
 ```
 
-## aria-controls
+<br/>
+
+### aria-controls
 > 사용자 인터페이스 요소 간의 관계를 명시하고 전달하는데 사용.
 > 일반적으로 대화형 컴포넌트, 위젯에서 사용됨. 버튼 클릭시 관련 패널이 열리는 경우 사용 가능.
 
@@ -54,12 +70,16 @@ token | note
 ```
 > 탭이 관리하는 탭 패널의 ID값을 넣어주고, 탭을 클릭하여 패널이 expanded되었을 때 초점이 이동하도록 tabindex=0을 부여해줌
 
-## aria-lable
+<br/>
+
+### aria-lable
 > html 요소에 접근 가능한 **설명용 텍스트**를 넣을 수 있음
 
 * 이미지를 사용해 시각적인 표현을 할 경우 대체 텍스트 역할
 
-## aria-labelledby
+<br/>
+
+### aria-labelledby
 > 요소의 레이블로서 DOM에 있는 다른 요소의 ID를 지정 가능함. **해당 텍스트 영역과 현재 요소를 연결**할 때 사용됨
 > 레이블을 지정하는 대상이 레이블을 지정하는 주제로 참조. 네이티브 레이블링 매커니즘을 무시하므로 aria-labelledby내용이 최우선이 됨
 
@@ -69,6 +89,8 @@ token | note
 * 컨트롤과 연관된 라벨: 버튼이나 입력 필드와 같은 컨트롤에 대한 설명 제공
 
 ```html
+
+<br/>
 <button id="schedule-button">스케줄 조회</button>
 <div id="schedule-info" aria-labelledby="schedule-button">
     이 버튼을 클릭하여 스케줄을 조회할 수 있습니다.
