@@ -77,6 +77,14 @@ token | note
 
 * 이미지를 사용해 시각적인 표현을 할 경우 대체 텍스트 역할
 
+```html
+<div role="text" class="text-area" tabindex="0" aria-label="필요한 금액: 무료">
+  <p aria-hidden="true"><strong>필요한 금액</strong></p>
+  <p aria-hidden="true"><strong class="txt-blue">100</strong>원</p>
+</div>
+```
+> 문장이나 단어 태그 안에 span, strong, br 등의 요소가 들어갈 경우 aria-hidden 처리를 한 후 상위 부모에게 초점을 이동시킨 뒤(textindex="0") aria-label로 숨김 처리한 텍스트를 작성해 읽히도록 함
+
 <br/>
 
 ### aria-labelledby
