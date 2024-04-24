@@ -2,6 +2,7 @@
 
 ## @at-root
 > 중첩에서 벗어날 때 사용됨
+> 중첩된 규칙 안에서 속성을 정의할 때, 최상위 레벨로 나오게끔 하는데 사용됨
 
 ### 예제1
 * 원본 sass
@@ -13,7 +14,7 @@
     widht: $w;
     height: $h;
   }
-@at-root .box{
+  @at-root .box{
     widht: $w;
     height: $h;
   }
@@ -63,6 +64,33 @@
 }
 ```
 ___
+
+## .class & {}
+> 중첩된 규칙에서 부모 선택자를 참조하는 데 사용됨(중첩된 규칙을 사용하면서도 원하는 선택자 구조를 유지할 수 있음)
+
+* 원본 sass
+```css
+.navbar {
+  background-color: #333;
+
+   .logo & {
+    color: #fff;
+  }
+}
+```
+* 변환된 css
+```css
+.navbar {
+  background-color: #333;
+}
+.navbar .logo {
+  color: #fff;
+}
+```
+> .navbar{ .log & {} } === .navbar .log{}
+
+___
+
 
 ## @for
 ### @for $var from (start number) to (end number) { ... }
