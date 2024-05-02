@@ -6,54 +6,182 @@
 
 ### command
 > 작업을 수행하지만 입력 데이터를 수신하지 않는 위젯 형태
+> 사용자가 실행할 수 있는 명령(커맨드)을 나타내는 역할을 지정
+> 사용자 인터페이스의 커맨드 버튼 또는 링크와 관련하여 사용 **사용자에게 어떤 동작을 실행할 수 있다는 시각적 힌트를 제공**
+
+e.g. 커맨드 버튼이나 링크를 사용하여 ```저장```, ```전송```, ```추가```와 같은 동작을 수행
+
+```html
+<button role="command" onclick="saveData()">저장</button>
+// 버튼은 사용자가 클릭하여 데이터를 저장할 수 있는 명령을 나타냄
+```
 
 <br/>
 
 ### composite
 > 탐색 가능한 하위 항목 또는 소유된 하위 항목을 포함할 수 있는 위젯
+> 사용자 정의 위젯이나 복합 컴포넌트를 보다 명확하게 설명 가능
+> 복합적인 구조를 스크린 리더와 같은 보조 기술에게 전달할 수 있음, 이를 통해 사용자가 해당 위젯의 구성 요소와 기능을 이해하고 조작할 수 있음
+
+e.g. 사용자 정의 콤보박스, 다중 선택 목록 
+
+```html
+<div role="composite" aria-labelledby="composite-label"> // 복합 위젯을 나타냅니다. 이 위젯은 다른 역할이 결합된 구조를 가지고 있으며, 라벨에 의해 식별됨
+    <label id="composite-label">컴포지트 위젯</label> // 컴포지트 위젯에 대한 라벨
+    <div role="option" aria-selected="false">옵션 1</div> // 위젯 내의 각각의 옵션
+    <div role="option" aria-selected="true">옵션 2</div>
+    <div role="option" aria-selected="false">옵션 3</div>
+</div>
+
+```
 
 <br/>
 
 ### input
-> 사용자 입력을 허용하는 일반적인 유형의 위젯
+> 사용자에게 데이터를 입력할 수 있는 입력 필드를 나타내는 WAI-ARIA 속성 ```<input>엘리먼트와 유사한 역할```
+> 보조 기술을 사용하는 사용자에게 필드의 의미를 전달하고, 해당 필드가 입력 가능한 역할임을 알려줌
+> 커스텀 위젯이나 특정 사용자 인터페이스 요소에서 사용,  텍스트나 데이터를 입력할 수 있는 역할을 정의됨
+
+```html
+<div role="input" aria-label="이름을 입력하세요"> //사용자에게 이름을 입력할 수 있는 역할을 나타내는 엘리먼트
+    <input type="text" id="name-input" placeholder="이름을 입력하세요"> //실제 텍스트 입력 필드
+</div>
+```
 
 <br/>
 
 ### landmark
+> 웹 페이지의 중요한 영역을 나타내는 데 사용, 웹 페이지의 다양한 섹션을 식별하고 해당 섹션의 역할을 설명함
 > 작성자가 지정한 특정 목적과 관련이 있고 사용자가 해당 섹션으로 쉽게 이동하고 페이지 요약에 나열할 수 있을 만큼 충분히 중요한 콘텐츠가 포함된 인식 가능한 섹션
 > 이러한 페이지 요약은 사용자 에이전트나 보조 기술에 의해 동적으로 생성될 수 있음
+
+e.g. 페이지의 주요 내용, 검색 기능, 메인 네비게이션
+
+role="landmark" | note.
+-- | --
+```banner``` | 주요 네비게이션 등이 포함된 웹 페이지 상단 부분 e.g. 로고, 사이트 이름
+```navigation``` | 사이트 내에서의 주요 네비게이션 e.g. 사이트 메뉴, 사이트 내 링크 
+```main``` | 페이지의 주요 콘텐츠. 주로 한 페이지 내에서 중요한 콘텐츠가 들어가는 영역
+```complementary``` | 주요 콘텐츠와 관련된 보조 콘텐츠 e.g. 사이드바나 광고, 연관 링크
+```contentinfo``` | 페이지의 하단에 위치하는 정보 영역 e.g. 저작권 정보, 연락처, 사이트 링크
+```form``` | 폼 요소를 포함하는 영역
+
+
+```html
+<header role="banner">
+    <!-- 로고, 사이트 이름, 주요 네비게이션 등 -->
+</header>
+
+<nav role="navigation">
+    <!-- 메인 네비게이션 -->
+</nav>
+
+<main role="main">
+    <!-- 페이지의 주요 콘텐츠 -->
+</main>
+
+<aside role="complementary">
+    <!-- 사이드바, 광고, 연관 링크 등 -->
+</aside>
+
+<footer role="contentinfo">
+    <!-- 저작권 정보, 연락처, 사이트 링크 등 -->
+</footer>
+```
 
 <br/>
 
 ### range
+> 사용자가 범위 내의 값을 선택할 수 있는 조절기(슬라이더)와 같은 역할을 나타냄
+> 주로 범위 입력 요소에 사용되며, 사용자가 값을 선택하고 조절할 수 있는 UI 컨트롤
 
-<br/>
+e.g.  사용자가 값의 범위를 선택하고 조절하는 데 사용할 수 있는 슬라이더, 스핀박스
 
-### roletype
+```html
+<div role="range" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50">
+    <input type="range" min="0" max="100" value="50">
+</div>
+```
 
 <br/>
 
 ### section
+> 웹 페이지 내에서 독립적인 섹션을 나타내는 데 사용
+> 일반적으로 콘텐츠를 논리적으로 그룹화하는 데 사용되며, 이 그룹은 주로 제목(<h1> ~ <h6>)과 함께 사용됨
+>  논리적으로 관련된 콘텐츠를 그룹화하고 이러한 섹션을 스크린 리더 등의 보조 기술을 사용하는 사용자에게 명시적으로 전달하는 데 사용
 
-<br/>
+```html
+<div role="section" aria-labelledby="section-heading">
+//aria-labelledby: 섹션의 제목을 식별하는 데 사용됩니다. 여기서는 제목의 ID를 참조하고 있습니다.
+    <h2 id="section-heading">공지사항</h2> 
+    <p>이번 주에는 새로운 기능이 추가되었습니다!</p>
+    <p>새로운 기능을 확인해보세요.</p>
+</div>
 
-### sectionhead
+<div role="section" aria-labelledby="section-heading2">
+    <h2 id="section-heading2">이벤트</h2>
+    <p>이번 주에는 다양한 이벤트가 준비되어 있습니다.</p>
+    <p>참가하고 즐거운 시간을 보내세요.</p>
+</div>
+```
 
 <br/>
 
 ### select
+> 사용자가 선택할 수 있는 옵션 목록을 나타내는 WAI-ARIA 속성
 
-<br/>
+e.g. ```드롭다운 메뉴```, ```콤보박스```
 
-### structure
+```html
+<div role="select" aria-labelledby="select-label">
+    <span id="select-label">선택하세요:</span>
+    <button aria-haspopup="true" aria-expanded="false" aria-controls="select-options">
+        선택된 옵션
+    </button>
+    <ul id="select-options" role="listbox" aria-hidden="true">
+        <li role="option">옵션 1</li>
+        <li role="option">옵션 2</li>
+        <li role="option">옵션 3</li>
+    </ul>
+</div>
+```
 
 <br/>
 
 ### widget
+> 사용자와 상호 작용할 수 있는 인터랙티브한 UI 요소를 나타내는 데 사용. 사용자와의 인터랙션에 중점을 둠
+> > 사용자가 특정 작업을 수행하거나 정보를 제공할 때 사용
+
+e.g.  버튼, 입력 필드, 체크박스, 라디오 버튼 등과 같은 다양한 UI 컨트롤
+
+```html
+<div role="widget" aria-label="검색 위젯">
+    <input type="text" aria-label="검색어 입력" placeholder="검색어를 입력하세요">
+    <button aria-label="검색하기">검색</button>
+</div>
+```
 
 <br/>
 
 ### window
+> 웹 페이지나 어플리케이션 내에서 독립적인 윈도우 영역 나타냄
+> 스크린 리더와 같은 보조 기술을 사용하는 사용자에게 해당 영역이 모달 다이얼로그나 팝업과 같은 윈도우로 인식될 수 있음
+> 현재 상황을 명확히 전달하고, 이 영역이 모달이나 팝업인지 인식하게 해줌
+
+e.g. 모달 다이얼로그, 팝업, 알림, 그리고 다른 윈도우 기반의 UI 요소
+```html
+<div role="window" aria-labelledby="dialog-title" aria-modal="true">
+    <div role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+        <h2 id="dialog-title">알림</h2>
+        <p id="dialog-description">메시지를 확인하시겠습니까?</p>
+        <button onclick="closeDialog()">닫기</button>
+    </div>
+</div>
+```
+
+
+
+<br/>
 
 
 ***
@@ -413,6 +541,18 @@
 
 ### alert
 > 중요도가 높고 시간에 민감한 정보가 포함된 라이브 영역
+> 1. 실시간으로 사용자에게 알려야 할 중요한 정보가 있는 경우
+> 2. 사용자의 주의를 요하는 긴급 상황
+
+```경고``` : 사용자에게 즉시 중요할 수 있는 메세지를 전달
+e.g. 폼 제출 후 오류가 발생했거나, 중요한 경고 메시지를 표시해야 할 때
+     온라인 상점에서 장바구니에 제품을 추가할 때 장바구니에 추가되었음을 알릴 때
+
+```html
+<div role="alert">
+    잘못된 이메일 형식입니다. 올바른 형식으로 입력해주세요.
+</div>
+```
 
 <br/>
 
