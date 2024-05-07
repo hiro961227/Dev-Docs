@@ -275,14 +275,20 @@ e.g.  버튼, 입력 필드, 체크박스, 라디오 버튼 등과 같은 다양
 > 스크린 리더와 같은 보조 기술을 사용하는 사용자에게 해당 영역이 모달 다이얼로그나 팝업과 같은 윈도우로 인식될 수 있음 <br/>
 > 현재 상황을 명확히 전달하고, 이 영역이 모달이나 팝업인지 인식하게 해줌
 
-e.g. 모달 다이얼로그, 팝업, 알림, 그리고 다른 윈도우 기반의 UI 요소
+보조 기술을 사용하는 사용자에게 해당 요소가 모달 창이며, 키보드 포커스가 잠겨 있고 다른 요소와의 상호 작용이 일시 중지되어야 함을 나타냄. <br/>
+e.g. 모달 다이얼로그, 팝업, 알림, 그리고 다른 윈도우 기반의 UI 요소 <br/><br/>
+※ ```모달 다이얼로그```: 사용자의 주의를 요구하고, 다른 컨텐츠와의 상호 작용을 일시작으로 차단함. 보통 css나 javascript를 사용하여 해당 요소의 가시성을 조절하며, ```aria-hidden```속성을 사용하여 모달 창이 열려있을 때 주변 콘텐츠가 접근성 요소로부터 숨겨지도록 함.
 
 ```html
-<div role="window" aria-labelledby="dialog-title" aria-modal="true">
-    <div role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
-        <h2 id="dialog-title">알림</h2>
-        <p id="dialog-description">메시지를 확인하시겠습니까?</p>
-        <button onclick="closeDialog()">닫기</button>
+<div role="window" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-content" aria-hidden="false">
+<!-- 
+    * aria-modal="true" : 모달 다이얼로그임을 나타냄 
+    * aria-labelledby, aria-describedby : 제목과 내용 지정
+ -->
+    <h2 id="modal-title">모달 다이얼로그 제목</h2>
+    <div id="modal-content">
+        <p>모달 다이얼로그 내용</p>
+        <button>닫기</button>
     </div>
 </div>
 ```
@@ -1784,15 +1790,18 @@ html에서는 주로 ```form```요소가 검색을 나타내는 데 사용되지
 
 
 ## Live Region (라이브 지역)
-> 라이브 영역 속성에 의해 수정될 수 있음
+> *동적으로 업데이트되는 콘텐츠*를 스크린 리더와 같은 보조 기술을 사용하는 사용자에게 **실시간으로 전달하는 데 사용**
 
 ### alert
+> 중요한 메시지를 사용자에게 즉시 알리는 데 사용되는 WAI-ARIA 속성 <br/>
 > 중요도가 높고 시간에 민감한 정보가 포함된 라이브 영역
-> 1. 실시간으로 사용자에게 알려야 할 중요한 정보가 있는 경우
-> 2. 사용자의 주의를 요하는 긴급 상황
 
-```경고``` : 사용자에게 즉시 중요할 수 있는 메세지를 전달
-e.g. 폼 제출 후 오류가 발생했거나, 중요한 경고 메시지를 표시해야 할 때
+ 1. 실시간으로 사용자에게 알려야 할 **중요한 정보**가 있는 경우 <br/>
+ 2. 사용자의 **주의를 요하는 긴급 상황**
+
+
+e.g. 경고, 에러, 성공 메세지 <br/>
+     폼 제출 후 오류가 발생했거나, 중요한 경고 메시지를 표시해야 할 때 <br/>
      온라인 상점에서 장바구니에 제품을 추가할 때 장바구니에 추가되었음을 알릴 때
 
 ```html
@@ -1804,34 +1813,64 @@ e.g. 폼 제출 후 오류가 발생했거나, 중요한 경고 메시지를 표
 <br/>
 
 ### log
-> 새로운 정보가 의미 있는 순서대로 추가되고, 오래된 정보는 사라질 수 있는 일종의 라이브 영역
+> 일련의 이벤트나 메시지를 기록하는 데 사용되는 WAI-ARIA 속성 <br/>
+> 애플리케이션의 활동을 사용자에게 보여주는 데 사용됨
+
+로그에는 보통 이벤트를 보여주는 요소들이 동적으로 추가되므로, 주로 ```aria-live``` 속성과 함께 사용하여 스크린 리더 사용자에게 알림 <br/>
+e.g. 채팅 애플리케이션에서 사용자가 전송한 메시지나 새로운 이벤트가 발생할 때마다 해당 메시지나 이벤트를 로그에 표시
 
 ```html
+<div role="log" aria-live="polite">
+<!-- aria-live="polite" 속성을 사용하여 변경 사항이 발생할 때마다 로그 메시지를 스크린 리더에게 즉시 읽어주도록 설정 -->
+    <p>사용자 A가 채팅방에 입장했습니다.</p>
+    <p>사용자 B: 안녕하세요!</p>
+    <p>사용자 A: 안녕하세요, 오랜만이에요.</p>
+</div>
 ```
 
 <br/>
 
 ### marquee
-> 필수적이지 않은 정보가 자주 변경되는 라이브 영역 유형
+> 스크롤되는 콘텐츠를 나타내는 WAI-ARIA 속성 <br/>
+> 자동으로 스크롤되는 콘텐츠를 포함하는 영역임을 명시적으로 지정
+
+***hlml5요소에서 사용되지 않음 <비표준>***, 대신 css와 javascript를 사용하여 스크롤 효과를 구현한 뒤 보조 기술을 사용하는 사용자들에게 스크롤되는 콘텐츠를 전달하기 위해 ```role="marquee"```속성을 사용함.*(단, 비표준이므로 css/js로만 표현하는 것을 권장)* 주로 ```aria-live```속성과 함께 사용하여 실시간으로 업데이트되는 콘텐츠를 스크롤하는 경우 유용함.
 
 ```html
+<div role="marquee" aria-live="polite">
+    스크롤되는 콘텐츠가 여기에 있습니다.
+</div>
 ```
 
 <br/>
 
 ### status
-> 
+> **중요한 상태 정보**를 나타내는 데 사용되는 WAI-ARIA 속성 <br/>
+> 페이지의 상태를 설명하는 데 사용됨. 주로 ```header``` ```footer``` 등 중요한 영역에서 사용.
+
+상태 정보를 제공하는 요소에는 보통 ```aria-live```속성을 함께 사용하여 변경 사항이 발생할 때마다 스크린 리더 사용자에게 즉시 읽어주도록 설정함. <br/>
+e.g. 작업의 성공 또는 실패, 로딩 상태 등을 사용자에게 시각적으로 알려주어야 할 때
 
 ```html
+<div role="status" aria-live="polite">
+    검색 결과: 10건이 검색되었습니다.
+</div>
 ```
 
 
 <br/>
 
 ### timer
-> 
+> 시간을 표시하거나 타이머를 나타내는 데 사용되는 WAI-ARIA 속성
+
+주로 aria-live 속성과 함께 사용되어 동적으로 변경되는 시간을 스크린 리더와 같은 보조 기술을 사용하는 사용자에게 즉시 전달함 <br/>
+e.g. 온라인 게임에서 남은 시간을 표시, 실시간 경매에서 경매 종료 시간 표시
 
 ```html
+<div role="timer" aria-live="assertive">
+<!-- aria-live="assertive" 속성을 사용하여 변경된 시간이 발생할 때마다 스크린 리더에게 즉시 읽어주도록 설정 -->
+    남은 시간: <span id="timer">60</span>초
+</div>
 ```
 
 
@@ -1848,18 +1887,39 @@ e.g. 폼 제출 후 오류가 발생했거나, 중요한 경고 메시지를 표
 > 브라우저 또는 애플리케이션 내에서 창 역할
 
 ### alertdialog
-> 초기 초점이 대화 상자 내의 요소로 이동, 경고 메세지가 포함된 대화상자 유형
+> 사용자에게 **중요한 알림을 전달**하고 추가적인 **상호 작용이 필요한 모달 창**을 나타내는 WAI-ARIA 속성
+
+e.g. 잘못된 암호 입력, 경고 메시지, 사용자에게 주의를 요하는 메시지를 표시 <br/>
+사용자는 이러한 모달창을 *확인*하거나 *취소*할 수 있음
 
 ```html
+<div role="alertdialog" aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
+<!-- 
+    * role="alertdialog" : 중요한 알림을 나타내는 모달 창임을 나타냄
+    * aria-labelledby, aria-describedby : 모달 창의 제목과 내용을 지정
+ -->
+    <h2 id="alert-dialog-title">경고!</h2>
+    <p id="alert-dialog-description">올바르지 않은 사용자 이름 또는 암호입니다. 다시 시도하세요.</p>
+    <button onclick="closeDialog()">확인</button>
+</div>
 ```
 
 <br/>
 
 ### dialog
-> 대화 상자는 웹 애플리케이션 기본 창의 하위 창** <br/>**
-> html 페이지의 경우, 기본 애플리케이션 창 = 전체 웹문서(body요소)
+> 사용자와의 상호 작용이 필요한 모달 창을 나타내는 WAI-ARIA 속성
+
+사용자에게 **중요한 정보를 제공**하거나 **사용자의 입력이 필요한 상황**에서 화면의 주요 콘텐츠와의 *상호 작용을 막고 일시적으로 포커스를 해당 창에 둠*. `aria-labelledby`와 `aria-describedby` 속성을 사용하여 모달 창의 제목과 설명을 지정함. 일반적으로 다음과 같은 상황에서 사용됨.<br/>
+1. ```정보 제공```: 사용자에게 중요한 정보나 알림을 제공하는 창입니다.
+2. ```입력 요청```: 사용자의 입력이 필요한 폼이나 작업을 수행하는 창입니다.
+3. ```선택```: 사용자로부터 선택을 받는 창입니다.
 
 ```html
+<div role="dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <h2 id="dialog-title">모달 다이얼로그</h2>
+    <p id="dialog-description">이 모달 창은 사용자와의 상호 작용이 필요한 예제입니다.</p>
+    <button onclick="closeDialog()">닫기</button>
+</div>
 ```
 
 
