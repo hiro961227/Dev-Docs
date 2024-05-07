@@ -370,7 +370,7 @@ e.g. 주문 확인, 로그인, 제출 등
 > 메뉴에서 사용자가 선택할 수 있는 각 항목을 나타내는 WAI-ARIA 속성 <br/>
 > 사용자에게 해당 요소가 메뉴에서 선택 가능한 항목임을 명시적으로 전달
 
-html에서 메뉴 항목은 주로 <a>요소나 <button>요소가 사용되지만, 시각적으로 다른 요소가 메뉴 항목으로 사용되는 경우가 있음. 이럴 때 role="menuitem"을 사용하여 해당 요소가 메뉴 항목 역할을 한다고 명시할 수 있음.
+html에서 메뉴 항목은 주로 ```a```요소나 ```button```요소가 사용되지만, 시각적으로 다른 요소가 메뉴 항목으로 사용되는 경우가 있음. 이럴 때 ```role="menuitem"```을 사용하여 해당 요소가 메뉴 항목 역할을 한다고 명시할 수 있음.
 
 ```html
 <div role="menuitem" onclick="alert('메뉴 항목 클릭됨')">항목 1</div>
@@ -448,7 +448,7 @@ e.g. 파일 업로드, 양식 제출, 데이터 로딩 > **시간이 걸리는 �
 ### radio
 > 라디오 버튼을 나타내는 WAI-ARIA 속성
 
-보통 <input type="radio"> 요소가 기본적으로 라디오 버튼을 나타내지만, 시각적으로 다른 요소가 라디오 버튼으로 디자인되어 사용될 수 있음. 이 경우 role="radio"를 사용하여 해당 요소가 라디오 버튼 역할을 한다고 명시할 수 있음.
+보통 ```input type="radio"``` 요소가 기본적으로 라디오 버튼을 나타내지만, 시각적으로 다른 요소가 라디오 버튼으로 디자인되어 사용될 수 있음. 이 경우 ```role="radio"```를 사용하여 해당 요소가 라디오 버튼 역할을 한다고 명시할 수 있음.
 
 ```html
 <div role="radiogroup" aria-labelledby="payment-method-label">
@@ -464,7 +464,7 @@ e.g. 파일 업로드, 양식 제출, 데이터 로딩 > **시간이 걸리는 �
 ### scrollbar
 > 사용자에게 요소의 내용이 화면에 맞지 않을 때 스크롤을 사용하여 추가 내용을 볼 수 있음을 알려줌
 
-주로 스크롤 가능한 요소(예: <div> 또는 <textarea>) 내에서 사용
+주로 스크롤 가능한 요소(예: ```div``` 또는 ```textarea```) 내에서 사용
 
 ```html
 <div role="scrollbar" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
@@ -511,7 +511,7 @@ e.g. 메뉴 항목 간에 구분을 주거나, 양식 필드를 그룹화하는 
 ### slider
 > 사용자가 값을 선택하거나 조절할 수 있는 슬라이더 컨트롤을 나타내는 WAI-ARIA 속성
 
-슬라이더는 <input type="range"> 요소로 표현되지만 시각적으로 다른 요소가 슬라이드처럼 동작할 수 있음. 이럴 때 role="slider"를 사용.
+슬라이더는 ```input type="range"``` 요소로 표현되지만 시각적으로 다른 요소가 슬라이드처럼 동작할 수 있음. 이럴 때 ```role="slider"```를 사용.
 
 ```html
 <div role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal" tabindex="0">
@@ -525,54 +525,127 @@ e.g. 메뉴 항목 간에 구분을 주거나, 양식 필드를 그룹화하는 
 <br/>
 
 ### spinbutton
-> 
+> 사용자가 값을 증가 또는 감소시킬 수 있는 스핀 버튼 컨트롤을 나타내는 WAI-ARIA 속성 <br/>
+> 주로 숫자 입력 필드와 함께 사용되며, 사용자가 값을 조절할 때 사용
+
+일반적으로 ```input type="number"``` 요소로 표현되지만, 시각적으로 다른 요소가 스핀 버튼처럼 동작할 수 있음. 이러할 때 ```role="spinbutton"```을 사용하여 명시함. (※ 실제로는 Javascript 함수를 사용하여 동작 기능 구현하여야 함)
 
 ```html
+<div role="spinbutton" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+    <button onclick="decrementValue()">-</button>
+    <input type="text" value="50" onchange="updateValue(this.value)">
+    <button onclick="incrementValue()">+</button>
+</div>
 ```
 
 
 <br/>
 
 ### switch
-> 
+> 사용자가 상태를 켜거나 끌 수 있는 스위치를 나타내는 WAI-ARIA 속성
+> 두 가지 중 하나의 상태를 선택할 때 사용됨(checkbox)
+
+일반적으로 ```input type="checkbox"``` 요소로 표현되지만, 시각적으로 다른 요소가 스위치처럼 동작할 수 있음. 이러할 때 ```role="switch"```을 사용하여 명시함. (※ 실제로는 Javascript 함수를 사용하여 동작 기능 구현하여야 함)
 
 ```html
+<div role="switch" aria-checked="true" tabindex="0" onclick="toggleSwitch()">
+    <div></div>
+</div>
 ```
 
 
 <br/>
 
 ### tab
-> 
+> 탭 형식의 사용자 인터페이스를 나타내는 WAI-ARIA 속성
+
+일반적으로 ```div``` 요소와 ```button``` 요소, 탭 패널로 구성됨.
+Tab = 사용자가 선택할 수 있는 제목 역할
+TabPanel = 해당 탭에 연결된 콘텐츠를 보여줌
 
 ```html
+<div role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="panel1" id="tab1">탭 1</button>
+    <button role="tab" aria-selected="false" aria-controls="panel2" id="tab2">탭 2</button>
+</div>
+<!-- Start: tabpanel -->
+<div id="panel1" role="tabpanel" aria-labelledby="tab1">
+    탭 1의 내용
+</div>
+<div id="panel2" role="tabpanel" aria-labelledby="tab2" style="display: none;">
+    탭 2의 내용
+</div>
+<!-- End: tabpanel -->
 ```
 
 
 <br/>
 
 ### tabpanel
-> 
+> 탭 패널의 역할을 나타내는 WAI-ARIA 속성 <br/>
+> 사용자가 탭을 선택할 때 해당 탭과 연결된 내용을 보여주는 컨테이너
 
 ```html
+<!-- Start: tab -->
+<div role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="panel1" id="tab1">탭 1</button>
+    <!-- 
+        * aria-selected="true": 초기에 선택된 탭에 대해 aria-selected 속성을 true로 설정
+        aria-controls="panel1": 해당 탭이 관련된 패널의 ID를 지정
+        id="tab1": 탭을 식별하는 ID
+     -->
+    <button role="tab" aria-selected="false" aria-controls="panel2" id="tab2">탭 2</button>
+</div>
+<!-- End: tab -->
+
+<div id="panel1" role="tabpanel" aria-labelledby="tab1">
+    <!-- * aria-labelledby="tab1": 해당 탭 패널과 연결된 탭의 ID를 지정 
+         * id="panel1": 탭 패널을 식별하는 ID -->
+    탭 1의 내용
+</div>
+<div id="panel2" role="tabpanel" aria-labelledby="tab2" style="display: none;">
+    탭 2의 내용
+</div>
 ```
 
 
 <br/>
 
 ### textbox
-> 
+>  사용자가 텍스트를 입력할 수 있는 입력 필드를 나타내는 WAI-ARIA 속성
+
+일반적으로 ```input type="text"``` 또는 ```textarea```요소로 표현되지만, 시각적으로 다른 텍스트 입력 필드처럼 동작할 수 있음. 이러할 때 ```role="textbox"```을 사용하여 명시함. (※ 실제로는 Javascript 또는 서버 측 스크립트를 사용하여 동작 기능 구현하여야 함)
 
 ```html
+<div role="textbox" contenteditable="true" aria-label="메모 입력">
+    <!-- contenteditable="true": 요소가 편집 가능하도록 지정함. 사용자가 직접 내용을 편집할 수 있음 -->
+    여기에 메모를 입력하세요.
+</div>
 ```
 
 
 <br/>
 
 ### treeitem
-> 
+> 트리 구조에서 각 항목을 나타내는 WAI-ARIA 속성 <br/>
+> ※ 트리는 계층적인 구조를 가진 정보를 표시할 때 사용되며, 각 항목은 하위 항목을 포함할 수 있음
+
+일반적으로 ```ul(목록)``` 또는 ```li(항목)```요소로 표현되지만, 시각적으로 다른 트리 항목처럼 사용될 수 있음. 이러할 때 ```role="treeitem"```을 사용하여 명시함.
 
 ```html
+<ul role="tree">
+    <li role="treeitem" aria-expanded="true" aria-level="1" aria-labelledby="folder1">폴더 1
+        <!-- aria-expanded="true/false": 항목이 펼쳐져 있는지 여부
+             aria-level="1/2/...": 트리의 루트부터 시작하여 몇 번째 레벨인지, 항목의 레벨을 나타냄
+             aria-labelledby="...": 항목의 제목을 나타내는 요소의 ID를 지정
+        -->
+        <ul role="group">
+            <li role="treeitem" aria-level="2" aria-labelledby="subfolder1">서브폴더 1</li>
+            <li role="treeitem" aria-level="2" aria-labelledby="subfolder2">서브폴더 2</li>
+        </ul>
+    </li>
+    <li role="treeitem" aria-expanded="false" aria-level="1" aria-labelledby="folder2">폴더 2</li>
+</ul>
 ```
 
 
