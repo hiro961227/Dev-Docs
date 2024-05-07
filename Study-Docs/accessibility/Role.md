@@ -1604,74 +1604,175 @@ e.g. 버튼, 입력 상자, 드롭다운 등
 <br/>
 
 ## Landmark (랜드마크)
-> 탐색 랜드마크로 사용되는 페이지 영역, 기본 유형에서 상속
+> 탐색 랜드마크로 사용되는 페이지 영역, 기본 유형에서 상속 <br/>
 > 모두 역할 속성 [ROLE-ATTRIBUTE]에서 가져옴, WAI-ARIA 역할 모델의 일부로 명확하게 만들기 위해 포함
 
 ### banner
-> 주로 사이트 중심 콘텐츠를 포함
+> 웹 페이지 상단에 위치한 배너(Header)를 나타내는 WAI-ARIA 속성
+
+일반적으로 웹 페이지의 상단에 위치, 주로 html ```header```요소로 쓰임. 시맨틱한 구조를 지키지 않는 경우 ```div```요소 등에도 사용 가능 <br/>
+e.g. 웹사이트의 로고, 제목, 검색 폼 등 웹사이트의 식별 및 탐색을 지원하는 요소를 포함하는 데 사용
 
 ```html
+<header role="banner">
+    <h1>웹사이트의 제목</h1>
+    <nav>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">소개</a></li>
+            <li><a href="#">서비스</a></li>
+            <li><a href="#">문의</a></li>
+        </ul>
+    </nav>
+</header>
 ```
 
 <br/>
 
 ### complementary
-> DOM 계층 구조의 유사한 수준에서 기본 콘텐츠를 보완하도록 설계되었지만 기본 콘텐츠와 분리되어도 의미를 유지
+> 주요 콘텐츠를 보완하는 보조 콘텐츠를 나타내는 WAI-ARIA 속성 <br/>
+> ``` ※ 보조 콘텐츠(Complementary Content): 주요 콘텐츠와 관련되어 있지만 별도의 정보를 제공하거나 보완하는 역할 ```
+
+주로 html ```aside```요소로 쓰임. 시맨틱한 구조를 지키지 않는 경우 ```div```요소 등에도 사용 가능 <br/>
+e.g. 사이드바, 검색 창, 광고, 연관 링크 등
 
 ```html
+<main>
+    <article>
+        <h2>주요 콘텐츠 제목</h2>
+        <p>주요 내용...</p>
+    </article>
+</main>
+<aside role="complementary">
+    <h2>부가적인 정보</h2>
+    <ul>
+        <li><a href="#">관련 링크 1</a></li>
+        <li><a href="#">관련 링크 2</a></li>
+        <li><a href="#">관련 링크 3</a></li>
+    </ul>
+</aside>
 ```
 
 <br/>
 
 ### contentinfo
-> 상위 문서에 대한 정보가 포함된 랜드마크 영역
+> 웹 페이지의 하단에 위치하는 부가 정보를 담은 영역을 나타내는 WAI-ARIA 속성
+
+일반적으로 html ```footer```요소로 쓰임. 해당 요소만으로 하단 영역의 역할을 명확하게 전달할 수 없는 경우, ```role="contentinfo"```추가해 하단 영역임을 나타냄 <br/>
+e.g. 웹 페이지의 저작권 정보, 사이트 링크, 연락처 정보 등 사용자에게 유용한 부가 정보 제공
 
 ```html
+<footer role="contentinfo">
+    <p>© 2024 웹사이트 제작자</p>
+    <nav>
+        <ul>
+            <li><a href="#privacy">개인정보 처리방침</a></li>
+            <li><a href="#terms">이용약관</a></li>
+            <li><a href="#contact">문의하기</a></li>
+        </ul>
+    </nav>
+</footer>
 ```
 
 <br/>
 
 ### form
-> 전체적으로 결합하여 양식을 생성하는 항목 및 객체의 컬렉션을 포함하는 랜드마크 영역
+> 폼(Form) 요소의 그룹을 나타내는 WAI-ARIA 속성 <br/>
+> ``` ※ 폼(Form): 웹 페이지에서 사용자로부터 정보를 입력받는 데 사용. 텍스트 입력 필드, 체크박스, 라디오 버튼, 드롭다운 메뉴 등의 폼 컨트롤을 포함 ```
+
+html에서는 ```form```요소가 폼을 나타내는 데 사용되지만, 시맨틱한 구조를 따르지 않거나 해당 요소를 사용하지 않는 경우 ```role="form"```을 추가하여 폼 요소의 그룹임을 나타냄. 주로 텍스트 입력 필드와 제출 버튼으로 구성됨.
 
 ```html
+<div role="form">
+    <label for="name">이름:</label>
+    <input type="text" id="name" name="name">
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email">
+    <button type="submit">제출</button>
+</div>
 ```
 
 <br/>
 
 ### main
-> 문서의 주요 내용을 포함하는 랜드마크
+> 웹 페이지의 주요 콘텐츠 영역을 나타내는 WAI-ARIA 속성 <br/>
+> ``` ※ 주요 콘텐츠(Primary Content): 용자가 페이지를 방문했을 때 가장 중요한 정보를 담고 있음. e.g. 웹 페이지의 제목, 주요 내용, 주요 기능 등을 포함 ```
+
+웹 페이지의 주요 내용은 시각적으로도 주요한 영역으로 인식되어야 하며, 보조 기술을 사용하는 사용자들에게도 중요한 정보로 전달되어야 함. html에서는 ```main```요소가 주요 콘텐츠를 나타내는 데 사용되지만, 해당 요소를 사용할 수 없는 경우나 시맨틱한 구조를 따르지 않는 경우 ```div```요소 등을 사용할 수도 있음. 이럴 경우 ```role="main"```을 추가하여 주요 콘텐츠임을 나타냄.
 
 ```html
+<main></main> 
+<!-- 위 시맨틱 요소를 사용하지 않을 경우 아래처럼 사용 -->
+<div role="main">
+    <h1>웹 페이지 제목</h1>
+    <p>웹 페이지의 주요 내용...</p>
+</div>
 ```
 
 <br/>
 
 ### navigation
-> 
+> 웹 페이지의 탐색 링크를 포함하는 영역을 나타내는 WAI-ARIA 속성 <br/>
+> ``` ※ 탐색 영역: 웹 페이지 내에서 다른 페이지로 이동할 수 있는 링크들. e.g. 메인 메뉴, 사이드바 메뉴, 페이지 내 링크 등 ```
+
+html에서는 보통 ```nav```요소가 탐색 링크를 포함하는 데 사용됨. nav요소를 사용하지 않거나 시맨틱한 구조를 따르지 않는 경우 ```div```요소 등을 사용할 수 있음.
 
 ```html
+<nav>
+    <ul>
+        <li><a href="#home">홈</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#services">서비스</a></li>
+        <li><a href="#contact">문의</a></li>
+    </ul>
+</nav>
+<!-- 위 시맨틱 요소를 사용하지 않을 경우 아래처럼 사용 -->
+<div role="navigation">
+    <ul>
+        <li><a href="#home">홈</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#services">서비스</a></li>
+        <li><a href="#contact">문의</a></li>
+    </ul>
+</div>
 ```
 
 
 <br/>
 
 ### region
-> 
+> 웹 페이지에서 관련된 콘텐츠를 그룹화하는 데 사용되는 WAI-ARIA 속성 <br/>
+> 주로 의미론적인 그룹화를 위해 사용되며 사용자의 레이아웃 이해를 도움
+
+```div```요소나 ```section```, ```article``` 등의 시맨틱 요소들도 사용할 수 있음.
+e.g. 특정 섹션의 콘텐츠를 감싸거나, 특정 영역의 레이아웃을 정의할 때 사용
 
 ```html
+<div role="region" aria-label="공지사항">
+    <!-- role="region"과 함께 aria-label을 사용하여 해당 요소가 '공지사항'영역임을 명시함. 하위 요소에는 공지사항 목록이 포함되어 있음. -->
+    <h2>공지사항</h2>
+    <ul>
+        <li>1월 회의 일정이 변경되었습니다.</li>
+        <li>2월 휴가 신청 안내</li>
+    </ul>
+</div>
 ```
 
 
 <br/>
 
 ### search
-> 
+> 웹 페이지 내 검색 기능을 나타내는 WAI-ARIA 속성
+
+특정 콘텐츠를 찾거나 필터링하는 데 사용되며, 주로 텍스트 입력 필드와 검색 버튼을 포함하여 사용자가 검색어를 입력하고 버튼을 클릭하여 검색을 실행할 수 있음. <br/>
+html에서는 주로 ```form```요소가 검색을 나타내는 데 사용되지만, 해당 요소를 사용하지 않을 경우 ```div```요소 등을 사용할 수도 있음.
 
 ```html
+<div role="search">
+    <input type="search" id="search-input" placeholder="검색어를 입력하세요">
+    <button type="submit">검색</button>
+</div>
 ```
-
-
 
 
 <br/>
