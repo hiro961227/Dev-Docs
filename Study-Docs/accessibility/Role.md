@@ -545,7 +545,7 @@ e.g. 메뉴 항목 간에 구분을 주거나, 양식 필드를 그룹화하는 
 <br/>
 
 ### switch
-> 사용자가 상태를 켜거나 끌 수 있는 스위치를 나타내는 WAI-ARIA 속성
+> 사용자가 상태를 켜거나 끌 수 있는 스위치를 나타내는 WAI-ARIA 속성 <br/>
 > 두 가지 중 하나의 상태를 선택할 때 사용됨(checkbox)
 
 일반적으로 ```input type="checkbox"``` 요소로 표현되지만, 시각적으로 다른 요소가 스위치처럼 동작할 수 있음. 이러할 때 ```role="switch"```을 사용하여 명시함. (※ 실제로는 Javascript 함수를 사용하여 동작 기능 구현하여야 함)
@@ -724,7 +724,8 @@ ___
 <br/>
 
 ### menu
-> 메뉴를 나타내는 WAI-ARIA 속성. 사용자에게 명령이나 옵션을 제공하는 인터페이스 요소를 나타냄 <br/>
+> 메뉴를 나타내는 WAI-ARIA 속성. <br/>
+> 사용자에게 명령이나 옵션을 제공하는 인터페이스 요소를 나타냄 <br/>
 > 사용자에게 명령이나 옵션을 제공하며, 보통 마우스나 키보드를 사용하여 선택됨
 
 일반적으로 ```ul(목록)``` 또는 ```li(항목)```요소로 표현되지만, ```div```나 ```nav```등의 요소로도 표현될 수 있음. 이러할 때 ```role="menu"```을 사용하여 명시함.
@@ -794,7 +795,7 @@ e.g. 컨텍스트 메뉴 (우클릭 메뉴), 내비게이션 메뉴, 작업 메�
 </div>
 ```
 
-※ role='tablist'와 role='tab'은 함께 사용되어 탭 인터페이스를 구성함.
+※ [role='tablist'](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#tablist)와 [role='tab'](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#tab)은 함께 사용되어 탭 인터페이스를 구성함.
 
 
 <br/>
@@ -983,6 +984,16 @@ e.g. 글의 중요한 부분을 강조하고, 다른 작가나 출처의 의견�
 
 <br/>
 
+**※ 함께 사용되는 role 요소들** <br/>
+> [표 레이아웃](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#table) | 
+[행 그룹](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowgroup) | 
+[테이블 행(tr)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | 
+[테이블 행 머리글(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | 
+[테이블 열 헤더(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | 
+[테이블 셀(td)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#cell)
+
+<br/>
+
 ### columnheader
 > 테이블의 열 헤더를 나타내는 WAI-ARIA 속성. <br/>
 > 해당 요소가 열의 제목을 나타내는 역할임을 명시적으로 지정. <br/>
@@ -1013,6 +1024,16 @@ e.g. 글의 중요한 부분을 강조하고, 다른 작가나 출처의 의견�
     </tbody>
 </table>
 ```
+<br/>
+
+**※ 함께 사용되는 role 요소들** <br/>
+> [표 레이아웃](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#table) | 
+[행 그룹](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowgroup) | 
+[테이블 행(tr)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | 
+[테이블 행 머리글(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | 
+[테이블 열 헤더(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | 
+[테이블 셀(td)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#cell)
+
 
 <br/>
 
@@ -1301,137 +1322,277 @@ e.g. 구분선을 표현하기 위해 사용한 div요소에 role="none"을 추�
 <br/>
 
 ### note
-> 
+> 부가적인 정보나 설명을 제공하는 요소를 나타내는 WAI-ARIA 속성
+
+html에서는 ```aside``` 요소가 부가적인 정보나 설명을 제공하는 데 사용됨. 다만 ```aside```요소가 적절하지 않는 상황이나, 부가적인 정보를 나타내는 요소가 시각적으로 구별되어야 할 때 해당 요소에 ```role="note"```를 추가하여 해당 요소가 부가 정보를 나타내는 것임을 명시할 수 있음.
 
 ```html
+<div role="note">
+    여기에 부가적인 정보가 들어갑니다.
+</div>
 ```
 
 
 <br/>
 
 ### paragraph
-> 
+> 문단(Paragraph)을 나타내는 WAI-ARIA 속성
+
+html에서는 일반적으로 ```p```요소가 문단을 나타내지만, 시각적으로 문단처럼 보이는 요소를 나타내기 위해서 해당 요소에 ```role="paragraph"```를 추가함. 단, ***의미론적으로 정확한 마크업을 위해***서 html에서 문단을 나타낼 땐 ```p```요소를 사용하는 것이 바람직함.
 
 ```html
+<div role="paragraph">
+    이것은 문단입니다.
+</div>
 ```
 
 
 <br/>
 
 ### presentation
-> 
+> 요소의 **시맨틱 역할을 무시**하도록 스크린 리더에게 알리는 WAI-ARIA 속성
+
+시맨틱한 의미를 가지고 있는 html요소들이 ***시각적 디자인***을 위한 요소로만 사용되는 경우가 있음, 이러할 때 ```role="presentation"```을 추가하여 해당 요소가 시각적인 디자인만을 용도로 사용됨을 나타냄.
 
 ```html
+<div role="presentation">
+    <span>이 요소는 시각적인 스타일링을 위한 용도로만 사용됩니다.</span>
+</div>
 ```
 
 
 <br/>
 
 ### row
-> 
+> 표의 행(```tr```)을 나타내는 WAI-ARIA 속성 <br/>
+> 테이블 레이아웃이나 다른 형태의 그리드 레이아웃을 구현할 때 유용하게 사용됨
+
+css를 사용하여 표 형태의 레이아웃을 만들 때 ```tr```요소가 아닌 ```div```요소를 사용할 경우, 해당 요소에 ```role="row"```를 추가해 해당 div가 표의 행임을 명시할 수 있음.
 
 ```html
+<div role="row">
+    <div role="cell">데이터 1</div>
+    <div role="cell">데이터 2</div>
+    <div role="cell">데이터 3</div>
+</div>
 ```
+
+<br/>
+
+**※ 함께 사용되는 role 요소들** <br/>
+> [표 레이아웃](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#table) | 
+[행 그룹](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowgroup) | 
+[테이블 행(tr)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | 
+[테이블 행 머리글(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | 
+[테이블 열 헤더(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | 
+[테이블 셀(td)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#cell)
 
 
 <br/>
 
 ### rowgroup
-> 
+> 표의 행 그룹을 나타내는 WAI-ARIA 속성
+
+```thead``` ```tbody``` ```tfoot```의 요소를 사용해 표의 헤더, 본문, 바닥을 나타내지 않고 ```div```나 ```section```을 이용하여 표를 구성할 때, 해당 요소에 ```role="rowgroup"```를 추가해 행 그룹을 나타낼 수 있음.
 
 ```html
+<div role="rowgroup">
+    <div role="row">
+        <div role="cell">이름</div>
+        <div role="cell">나이</div>
+    </div>
+    <div role="row">
+        <div role="cell">철수</div>
+        <div role="cell">30세</div>
+    </div>
+    <div role="row">
+        <div role="cell">영희</div>
+        <div role="cell">25세</div>
+    </div>
+</div>
 ```
+
+<br/>
+
+**※ 함께 사용되는 role 요소들** <br/>
+> [표 레이아웃](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#table) | 
+[행 그룹](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowgroup) | 
+[테이블 행(tr)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | 
+[테이블 행 머리글(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | 
+[테이블 열 헤더(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | 
+[테이블 셀(td)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#cell)
 
 
 <br/>
 
 ### rowheader
-> 
+> 표의 행 머리글(```th```)을 나타내는 WAI-ARIA 속성 <br/>
+> 일반적으로 각 열에 대한 라벨이나 제목을 포함
+
+css를 사용하여 표 형태의 레이아웃을 만들 때 ```th```요소가 아닌 ```div```요소를 사용할 경우, 해당 요소에 ```role="rowheader"```를 추가해 해당 div가 표의 행 머리글임을 명시할 수 있음.
 
 ```html
+<div role="rowheader">이름</div>
 ```
+
+<br/>
+
+**※ 함께 사용되는 role 요소들** <br/>
+> [표 레이아웃](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#table) | 
+[행 그룹](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowgroup) | 
+[테이블 행(tr)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | 
+[테이블 행 머리글(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | 
+[테이블 열 헤더(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | 
+[테이블 셀(td)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#cell)
 
 
 <br/>
 
 ### separator 
-> 
+> 문서나 구성 요소 사이의 ```구분선```을 나타내는 WAI-ARIA 속성
+
+구분선은 시각적 요소가 아니기 때문에 스크린 리더 등의 보조 기술을 사용하는 사용자에게 필요한 정보를 전달할 때 ```role="separator"```을 추가함. 구분선의 역할과 위치를 명확하게 전달하고, 콘텐츠의 구조를 이해하는데 도움을 줌. <br/>
+e.g. 수직 메뉴 항목 사이의 구분, 수평적인 섹션 구분 등
 
 ```html
+<div role="separator" aria-orientation="horizontal"></div>
+<!-- aria-orientation속성을 사용하여 구분선이 수평적인지 수직적인지 명시할 수 있음 -->
 ```
 
 
 <br/>
 
 ### strong
-> 
+> 강조된 텍스트를 나타내는 WAI-ARIA 속성
+
+일반적으로 ```strong``` 요소가 텍스트를 강조하는 데 사용됨. 시각적으로 강조되지 않는 텍스트가 있을 수 있기에 해당 요소에 ```role="strong"```을 추가하여 중요한 텍스트임을 나타내 사용자의 주의를 끌 수 있음.
 
 ```html
+<p><span role="strong">중요한 메시지:</span> 이 작업은 되돌릴 수 없습니다.</p>
 ```
 
 
 <br/>
 
 ### subscript
-> 
+> 아래 첨자(하위 첨자)를 나타내는 WAI-ARIA 속성 <br/>
+> ```※ 아래 첨자: 일반적으로 화학식, 수학식, 수식, 소스 코드 등에서 사용```
+
+html에서는 ```sub``` 요소가 아래 첨자를 나타냄. 해당 요소가 사용되지 않는 경우나, 시각적으로 표현되지 않는 경우 ```role="subscript"```를 사용하여 아래 첨자임을 나타냄.
 
 ```html
+<p>화학식: H<span role="subscript">2</span>O</p>
 ```
 
 
 <br/>
 
 ### superscript
-> 
+> 위 첨자(상위 첨자)를 나타내는 WAI-ARIA 속성
+> ```※ 상위 첨자: 일반적으로 화학식, 수학식, 수식, 지수 등에서 사용```
+
+html에서는 ```sup``` 요소가 위 첨자를 나타냄. 해당 요소가 사용되지 않는 경우나, 시각적으로 표현되지 않는 경우 ```role="superscript"```를 사용하여 위 첨자임을 나타냄.
 
 ```html
+<p>지수: 10<span role="superscript">2</span></p>
 ```
 
 
 <br/>
 
 ### table
-> 
+> 표를 나타내는 WAI-ARIA 속성
+
+css를 사용하여 표 형태의 레이아웃을 만들 때 ```table```요소가 적합하지 않거나 시각적으로 표현되지 않는 경우, 해당 요소에 ```role="table"```를 추가해 해당 div가 표의 행 머리글임을 명시할 수 있음.
 
 ```html
+<div role="table">
+    <div role="row">
+        <div role="cell">이름</div>
+        <div role="cell">나이</div>
+    </div>
+    <div role="row">
+        <div role="cell">철수</div>
+        <div role="cell">30세</div>
+    </div>
+    <div role="row">
+        <div role="cell">영희</div>
+        <div role="cell">25세</div>
+    </div>
+</div>
 ```
+<br/>
+
+**※ 함께 사용되는 role 요소들** <br/>
+> [표 레이아웃](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#table) | 
+[행 그룹](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowgroup) | 
+[테이블 행(tr)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | 
+[테이블 행 머리글(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | 
+[테이블 열 헤더(th)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | 
+[테이블 셀(td)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#cell)
 
 
 <br/>
 
 ### term
-> 
+> 용어(terms)를 나타내는 WAI-ARIA 속성 <br/>
+> ```※ 용어: 문서나 콘텐츠에서 특정한 개념이나 용어를 의미```
+
+e.g. ```dfn```:용어를 정의하는 용도 <br/>
+    ```abbr```: 약어 <br/>
+    ```var```: 변수 <br/>
+    ```code```: 코드 <br/>
+    ```kbd```: 키보드 입력 <br/>
+위의 요소들이 적합하지 않거나 시각적으로 구분되지 않을 때 ```role="term"```을 사용함
 
 ```html
+<p><span role="term">웹 접근성</span>은 모든 사용자가 웹 콘텐츠에 동등하게 접근할 수 있는 웹 사이트를 의미합니다.</p>
 ```
+
 
 
 <br/>
 
 ### time
-> 
+> 날짜나 시간을 나타내는 WAI-ARIA 속성
+
+html에서 ```time``` 요소는 datetime 속성을 사용하여 기계가 읽을 수 있는 형식의 날짜나 시간을 포함. 이가 적절하지 않거나 시각적으로 표현되지 않는 경우 ```role="time"```을 추가하여 날짜나 시간임을 나타냄.
 
 ```html
+<p>다음 모임은 <span role="time" datetime="2024-04-25T19:00">4월 25일 오후 7시</span>에 있습니다.</p>
 ```
 
 
 <br/>
 
 ### toolbar
-> 
+> 도구 모음(Toolbar)을 나타내는 WAI-ARIA 속성 <br/>
+> ```※도구 모음: 일련의 기능을 그룹화하고 이를 사용자에게 제공하는 UI 요소```
+
+일반적으로 편집기, 웹 애플리케이션, 브라우저 등에서 사용 <br/>
+html에서는 ```div``` 또는 ```nav```요소 등을 사용하여 나타낼 수 있지만, 두 요소로 도구 모음의 역할을 명확하게 전달할 수 없는 경우 해당 요소에 ```role="toolbar"```를 추가하여 도구 모음임을 나타낼 수 있음. <br/>
+e.g. 버튼, 입력 상자, 드롭다운 등
 
 ```html
+<div role="toolbar">
+    <button>저장</button>
+    <button>불러오기</button>
+    <button>새로 만들기</button>
+</div>
 ```
-
 
 <br/>
 
 ### tooltip
-> 
+> 화면 낭독기나 키보드만을 사용하는 사용자들에게 유용한 정보를 제공하는 데 사용 <br/>
+> 주로 마우스를 이용하여 요소 위에 마우스를 올렸을 때 나타나는 작은 정보나 설명을 제공하기 위해 사용
+
+```role="tooltip"```을 가진 요소는 일반적으로 ```aria-describedby``` 속성을 사용하여 해당 **툴팁을 설명하는 요소의 ID**를 가리킴
 
 ```html
+<button aria-describedby="nowTooltip">버튼</button>
+<div id="nowTooltip" role="tooltip">이 버튼은 기능을 실행합니다.</div>
 ```
-
 
 
 <br/>
