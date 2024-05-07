@@ -119,7 +119,7 @@ e.g. 커맨드 버튼이나 링크를 사용하여 ```저장```, ```전송```, `
 
 ```html
 <button role="command" onclick="saveData()">저장</button>
-// 버튼은 사용자가 클릭하여 데이터를 저장할 수 있는 명령을 나타냄
+ <!-- 버튼은 사용자가 클릭하여 데이터를 저장할 수 있는 명령을 나타냄 -->
 ```
 
 <br/>
@@ -132,9 +132,10 @@ e.g. 커맨드 버튼이나 링크를 사용하여 ```저장```, ```전송```, `
 e.g. 사용자 정의 콤보박스, 다중 선택 목록 
 
 ```html
-<div role="composite" aria-labelledby="composite-label"> // 복합 위젯을 나타냅니다. 이 위젯은 다른 역할이 결합된 구조를 가지고 있으며, 라벨에 의해 식별됨
-    <label id="composite-label">컴포지트 위젯</label> // 컴포지트 위젯에 대한 라벨
-    <div role="option" aria-selected="false">옵션 1</div> // 위젯 내의 각각의 옵션
+<div role="composite" aria-labelledby="composite-label"> 
+     <!-- 복합 위젯을 나타냄. 이 위젯은 다른 역할이 결합된 구조를 가지고 있으며, 라벨에 의해 식별됨 -->
+    <label id="composite-label">컴포지트 위젯</label>  <!-- 컴포지트 위젯에 대한 라벨 -->
+    <div role="option" aria-selected="false">옵션 1</div>  <!-- 위젯 내의 각각의 옵션 -->
     <div role="option" aria-selected="true">옵션 2</div>
     <div role="option" aria-selected="false">옵션 3</div>
 </div>
@@ -149,8 +150,8 @@ e.g. 사용자 정의 콤보박스, 다중 선택 목록
 > 커스텀 위젯이나 특정 사용자 인터페이스 요소에서 사용,  텍스트나 데이터를 입력할 수 있는 역할을 정의됨
 
 ```html
-<div role="input" aria-label="이름을 입력하세요"> //사용자에게 이름을 입력할 수 있는 역할을 나타내는 엘리먼트
-    <input type="text" id="name-input" placeholder="이름을 입력하세요"> //실제 텍스트 입력 필드
+<div role="input" aria-label="이름을 입력하세요"> <!-- 사용자에게 이름을 입력할 수 있는 역할을 나타내는 엘리먼트 -->
+    <input type="text" id="name-input" placeholder="이름을 입력하세요"> <!-- 실제 텍스트 입력 필드 -->
 </div>
 ```
 
@@ -218,7 +219,7 @@ e.g.  사용자가 값의 범위를 선택하고 조절하는 데 사용할 수 
 
 ```html
 <div role="section" aria-labelledby="section-heading">
-//aria-labelledby: 섹션의 제목을 식별하는 데 사용됩니다. 여기서는 제목의 ID를 참조하고 있습니다.
+<!-- aria-labelledby: 섹션의 제목을 식별하는 데 사용됩니다. 여기서는 제목의 ID를 참조하고 있습니다. -->
     <h2 id="section-heading">공지사항</h2> 
     <p>이번 주에는 새로운 기능이 추가되었습니다!</p>
     <p>새로운 기능을 확인해보세요.</p>
@@ -346,9 +347,9 @@ e.g. 주문 확인, 로그인, 제출 등
     Row 1, Column 2
 </div>
 <!-- 
-    role="gridcell"은 해당 요소가 그리드 셀 역할을 수행함을 나타냅니다.
-   aria-rowindex="1"은 해당 셀이 그리드에서 첫 번째 행에 위치한다는 것을 나타냅니다.
-   aria-colindex="2"는 해당 셀이 그리드에서 두 번째 열에 위치한다는 것을 나타냅니다.
+    * role="gridcell"은 해당 요소가 그리드 셀 역할을 수행함을 나타냅니다.
+    * aria-rowindex="1"은 해당 셀이 그리드에서 첫 번째 행에 위치한다는 것을 나타냅니다.
+    * aria-colindex="2"는 해당 셀이 그리드에서 두 번째 열에 위치한다는 것을 나타냅니다.
  -->
 ```
 
@@ -557,7 +558,7 @@ e.g. 메뉴 항목 간에 구분을 주거나, 양식 필드를 그룹화하는 
 <br/>
 
 ### tab
-> 탭 형식의 사용자 인터페이스를 나타내는 WAI-ARIA 속성
+> ```[개별 탭]``` 탭 형식의 사용자 인터페이스를 나타내는 WAI-ARIA 속성
 
 일반적으로 ```div``` 요소와 ```button``` 요소, 탭 패널로 구성됨.
 Tab = 사용자가 선택할 수 있는 제목 역할
@@ -591,7 +592,7 @@ TabPanel = 해당 탭에 연결된 콘텐츠를 보여줌
     <button role="tab" aria-selected="true" aria-controls="panel1" id="tab1">탭 1</button>
     <!-- 
         * aria-selected="true": 초기에 선택된 탭에 대해 aria-selected 속성을 true로 설정
-        aria-controls="panel1": 해당 탭이 관련된 패널의 ID를 지정
+        * aria-controls="panel1": 해당 탭이 관련된 패널의 ID를 지정
         id="tab1": 탭을 식별하는 ID
      -->
     <button role="tab" aria-selected="false" aria-controls="panel2" id="tab2">탭 2</button>
@@ -635,9 +636,9 @@ TabPanel = 해당 탭에 연결된 콘텐츠를 보여줌
 ```html
 <ul role="tree">
     <li role="treeitem" aria-expanded="true" aria-level="1" aria-labelledby="folder1">폴더 1
-        <!-- aria-expanded="true/false": 항목이 펼쳐져 있는지 여부
-             aria-level="1/2/...": 트리의 루트부터 시작하여 몇 번째 레벨인지, 항목의 레벨을 나타냄
-             aria-labelledby="...": 항목의 제목을 나타내는 요소의 ID를 지정
+        <!-- * aria-expanded="true/false": 항목이 펼쳐져 있는지 여부
+             * aria-level="1/2/...": 트리의 루트부터 시작하여 몇 번째 레벨인지, 항목의 레벨을 나타냄
+             * aria-labelledby="...": 항목의 제목을 나타내는 요소의 ID를 지정
         -->
         <ul role="group">
             <li role="treeitem" aria-level="2" aria-labelledby="subfolder1">서브폴더 1</li>
@@ -657,75 +658,205 @@ ___
 ___
 
 ### combobox
+> **텍스트 입력과 드롭다운 목록을 결합**한 편집 가능한 콤보 상자를 나타내는 WAI-ARIA 속성 <br/>
 > 사용자가 입력 값을 설정하는 데 도움이 되도록 동적으로 팝업할 수 있는 목록 상자 또는 그리드와 같은 다른 요소를 제어하는 입력
->
+
+일반적으로 ```input``` 또는 ```datalist```요소로 표현되지만, 시각적으로 다른 요소가 콤보 상자로 사용될 수 있음. 이러할 때 ```role="combobox"```을 사용하여 명시함. (※ 실제로는 Javascript를 사용하여 사용자 입력 처리 및 목록 필터링-업데이트 동작 기능 구현하여야 함)
+
 ```html
+<div role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-owns="fruit-list" aria-autocomplete="list">
+    <input type="text" aria-autocomplete="both" aria-controls="fruit-list" autocomplete="off" placeholder="과일을 입력하세요">
+    <ul id="fruit-list" role="listbox" style="display: none;">
+        <li role="option">사과</li>
+        <li role="option">바나나</li>
+        <li role="option">딸기</li>
+        <li role="option">오렌지</li>
+    </ul>
+</div>
 ```
 
 <br/>
 
 ### grid
+> 데이터를 표시하는 그리드를 나타내는 WAI-ARIA 속성 <br/>
+> ```*grid: 행과 열로 구성된 데이터 집합을 시각적으로 표시하는 데 사용``` <br/>
 > 방향 화살표 키와 같은 2차원 탐색 방법을 사용하여 그리드의 일부 또는 전체 셀에 초점을 맞출 수 있는, 하나 이상의 셀이 있는 하나 이상의 행 컬렉션을 포함하는 복합 위젯
 
+일반적으로 ```table```요소로 표현되지만, ```div``` ```ul``` 요소로도 구현이 가능. 이러할 때 ```role="grid"```을 사용하여 명시함.
+
+그리드는 테이블과 비슷하지만, **테이블은 주로 구조적인 정보를 나타내는 데 사용**되고, 그리드는 **데이터를 시각적으로 표시하고 상호작용할 수 있는 방법을 제공하는 데 사용**
+
 ```html
+<div role="grid">
+    <div role="row">
+        <div role="gridcell">이름</div>
+        <div role="gridcell">나이</div>
+    </div>
+    <div role="row">
+        <div role="gridcell">John</div>
+        <div role="gridcell">30</div>
+    </div>
+    <div role="row">
+        <div role="gridcell">Alice</div>
+        <div role="gridcell">25</div>
+    </div>
+</div>
 ```
 
 <br/>
 
 ### listbox
+> 목록을 나타내는 WAI-ARIA 속성 <br/>
 > 선택 목록에서 하나 이상의 항목을 선택할 수 있게 해주는 위젯
 
+일반적으로 ```select```요소로 표현되지만, 시각적으로 다른 요소가 목록 상자로 사용될 수 있음. 이러할 때 ```role="listbox"```을 사용하여 명시함. (※ 실제 데이터를 표시하려면 Javascript를 사용하여 목록 상자의 동작을 제어함)
+
 ```html
+<div role="listbox" aria-label="색상 선택">
+    <div role="option" aria-selected="true">빨강</div>
+    <div role="option">노랑</div>
+    <div role="option">파랑</div>
+</div>
 ```
 
 <br/>
 
 ### menu
-> 
+> 메뉴를 나타내는 WAI-ARIA 속성. 사용자에게 명령이나 옵션을 제공하는 인터페이스 요소를 나타냄 <br/>
+> 사용자에게 명령이나 옵션을 제공하며, 보통 마우스나 키보드를 사용하여 선택됨
+
+일반적으로 ```ul(목록)``` 또는 ```li(항목)```요소로 표현되지만, ```div```나 ```nav```등의 요소로도 표현될 수 있음. 이러할 때 ```role="menu"```을 사용하여 명시함.
+
+e.g. 컨텍스트 메뉴 (우클릭 메뉴), 내비게이션 메뉴, 작업 메뉴 등
 
 ```html
+<div role="menu">
+    <div role="menuitem">항목 1</div>
+    <div role="menuitem">항목 2</div>
+    <div role="menuitem">항목 3</div>
+</div>
 ```
 
 <br/>
 
 ### menubar
-> 
+> 메뉴 항목들을 포함하는 메뉴 바를 나타내는 WAI-ARIA 속성 <br/>
+>  일반적으로 웹 애플리케이션의 상단에 위치하고, 메뉴 항목들을 포함하여 사용자에게 주요 네비게이션 옵션을 제공 <br/>
+> 메뉴 바는 주로 마우스나 키보드를 사용하여 사용자가 *메뉴 항목에 대한 네비게이션을 수행*할 수 있도록 험
+
+일반적으로 ```ul(목록)``` 요소로 표현되며, 각 메뉴 항목은 ```li(항목)```요소로 구성됨, 이러한 요소들은 ```role="munubar"``` 및 ```role="muneitem"```을 사용하여 메뉴바와 메뉴 항목을 나타냄.
+
 
 ```html
+<div role="menubar">
+    <ul>
+        <li role="menuitem"><a href="#">홈</a></li>
+        <li role="menuitem"><a href="#">프로필</a></li>
+        <li role="menuitem"><a href="#">설정</a></li>
+        <li role="menuitem"><a href="#">로그아웃</a></li>
+    </ul>
+</div>
 ```
 
 <br/>
 
 ### radiogroup
-> 
+> 라디오 버튼 그룹을 나타내는 WAI-ARIA 속성 <br/>
+> 상호 배타적인 옵션 중 하나를 선택하는 데 사용되며, 사용자가 그룹 내에서 라디오 버튼을 선택하면 다른 라디오 버튼들은 선택이 해제됨
+
+일반적으로 ```input type="radio"```요소로 표현되지만, 시각적으로 다른 요소가 목록 상자로 사용될 수 있음. 이러할 때 ```role="radiogroup"```을 사용하여 명시함. (※ 실제로는 Javascript를 사용하여 라디오 버튼의 상태를 관리하고 사용자의 선택에 따라 작업을 수행해야함)
 
 ```html
+<div role="radiogroup" aria-labelledby="gender-label">
+    <span id="gender-label">성별 선택</span>:
+    <div role="radio" aria-checked="true">남성</div>
+    <div role="radio" aria-checked="false">여성</div>
+    <div role="radio" aria-checked="false">기타</div>
+</div>
 ```
 
 <br/>
 
 ### tablist
-> 
+> ```[탭의 목록]``` 탭의 목록을 나타내는 WAI-ARIA 속성 <br/>
+> ```※ 탭: 웹 페이지의 여러 섹션을 탐색하는 데 사용되는 인터페이스 요소로, 사용자가 각 섹션을 선택할 수 있음``` <br/>
+> 일반적으로 여러 개의 탭을 포함하는 컨테이너 역할
+
+일반적으로 ```ul(목록)``` 요소와 그 안의 ```li(항목)```요소로 구성되나, 시각적으로 다른 요소로도 표현될 수 있음. 이러할 때 ```role="tablist"```을 사용하여 명시함.
 
 ```html
+<div role="tablist">
+    <div role="tab" aria-selected="true">탭 1</div>
+    <div role="tab" aria-selected="false">탭 2</div>
+    <div role="tab" aria-selected="false">탭 3</div>
+</div>
 ```
+
+※ role='tablist'와 role='tab'은 함께 사용되어 탭 인터페이스를 구성함.
+
 
 <br/>
 
 ### tree
-> 
+> 트리 구조를 나타내는 WAI-ARIA 속성. 계층적인 데이터를 시각적으로 표현하는데 사용됨 <br/>
+> 일반적으로 여러 수준의 부모-자식 관계로 구성된 데이터를 표시할 때 사용
+
+일반적으로 ```ul(목록)``` 요소와 ```li(항목)```요소로 구성됨, 시각적으로 다른 요소를 사용하여 구성할 땐 ```role="tree"```을 사용하여 트리 역할을 하는 것을 나타냄.
+
+e.g. 파일 시스템, 메뉴 구조, 댓글 스레드 등과 같이 계층적인 데이터를 표시
 
 ```html
+<div role="tree">
+    <div role="treeitem" aria-expanded="true" aria-level="1">Parent 1
+        <div role="group">
+            <div role="treeitem" aria-level="2">Child 1</div>
+            <div role="treeitem" aria-level="2">Child 2</div>
+        </div>
+    </div>
+    <div role="treeitem" aria-expanded="false" aria-level="1">Parent 2
+        <div role="group">
+            <div role="treeitem" aria-level="2">Child 3</div>
+            <div role="treeitem" aria-level="2">Child 4</div>
+        </div>
+    </div>
+</div>
 ```
 
 <br/>
 
 ### treegrid
-> 
+> 트리 형태의 테이블을 나타내는 WAI-ARIA 속성 <br/>
+> 트리 구조와 표의 특성을 결합하여 계층적 데이터를 표시하고 상호 작용할 수 있는 요소
+
+표 형식으로 데이터를 표시하면서 각 행이 하나 이상의 트리 레벨을 가질 수 있음. 일반적으로는 행과 열로 구성됨. <br/>
+행: 트리의 노드 (```tr```요소) <br/>
+열: 데이터 필드 (```td```요소) <br/> <br/>
+
+일반적으로 ```table``` 요소로 구현되며, 각 노드가 펼쳐지거나 축소될 수 있도록 트리의 상태를 표시하는 열을 필요로 함.
 
 ```html
+<table role="treegrid" aria-labelledby="treegrid-heading">
+    <thead>
+        <tr>
+            <th id="treegrid-heading">사용자</th>
+            <th>나이</th>
+            <th>직업</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr role="row">
+            <td role="gridcell" aria-expanded="true">John</td>
+            <td role="gridcell">30</td>
+            <td role="gridcell">개발자</td>
+        </tr>
+        <tr role="row">
+            <td role="gridcell" aria-expanded="false">Alice</td>
+            <td role="gridcell">25</td>
+            <td role="gridcell">디자이너</td>
+        </tr>
+    </tbody>
+</table>
 ```
-
 
 
 <br/>
@@ -737,93 +868,248 @@ ___
 ## Document Structure (문서 구조)
 > 페이지의 콘텐츠를 구성하는 구조를 설명
 
-```html
-```
+<br/>
+
 
 ### application
-> 하나 이상의 포커스 가능 요소를 포함하는 구조 (e.g. 키보드, 제스처 이벤트)
+> 웹 애플리케이션을 나타내는 WAI-ARIA 속성. 해당 요소가 웹 애플리케이션의 주요 컨테이너임을 명시적으로 지정할 수 있음 <br/>
+> ``` ※ 웹 애플리케이션: 일반적으로 데스크톱 애플리케이션과 유사한 기능을 제공하는 웹사이트 ```
+> 페이지가 로드될 때 완전히 새로운 사용자 인터페이스를 제공하며, 사용자가 페이지를 다시 로드하지 않고도 동적으로 상호 작용할 수 있음
+> *키보드 포커스를 받고 상호 작용할 수 있는 요소들을 포함하고 있다고 가정*함
+
+e.g. Gmail, Google Docs, Trello 등
+
+
+#### 주요 특징
+1. **동적 상호 작용**: 페이지를 다시 로드하지 않고도 사용자와의 상호 작용이 가능
+2. **커스텀 사용자** 인터페이스: 데스크톱 애플리케이션과 유사한 사용자 인터페이스를 제공
+3. **실시간 업데이트**: 데이터의 변경이 발생할 때 페이지를 새로 고치지 않고도 즉시 업데이트 됨
 
 ```html
+<div role="application">
+    <h1>Todo List</h1>
+    <input type="text" placeholder="Add new todo">
+    <ul>
+        <li>Todo item 1</li>
+        <li>Todo item 2</li>
+        <li>Todo item 3</li>
+    </ul>
+</div>
 ```
 
 <br/>
 
 ### article
-> 문서, 페이지, 사이트 독립적인 부분 구성하는 구성 요소 페이지 섹션
+> 웹 페이지에서 독립적인 콘텐츠 블록을 나타내는 WAI-ARIA 속성. 해당 요소가 독립적인 콘텐츠 블록인 것을 명시적으로 지정할 수 있음
+
+```article``` 요소와 동일함. 특정한 주제나 내용을 가지고있있는 섹션 중, **독립적으로 의미를 가지는** 섹션에 사용됨. 해당 섹션이 다른 컨텐츠와 분리될 수 있고, 독립적으로 읽힐 수 있는 콘텐츠를 포함하고 있음. <br/>
+e.g. 뉴스 기사, 블로그 게시물, 포럼 게시물 등 웹 페이지에서 독립적인 부분 구성하는 구성 요소 페이지 섹션
 
 ```html
+<article role="article">
+    <h2>게시물 제목</h2>
+    <p>게시물 내용...</p>
+    <footer>
+        <p aria-label="게시자: 사용자 이름">게시자: <span aria-hidden="true">사용자 이름</span></p>
+        <p aria-label="게시일: 2024년 4월 24일">게시일: <time datetime="2024-04-24" aria-hidden="true">2024년 4월 24일</time></p>
+    </footer>
+</article>
 ```
 
 <br/>
 
 ### blockquote
-> 다른 출처에서 인용한 콘텐츠 섹션
+> 인용문을 나타내는 WAI-ARIA 속성. 해당 요소가 인용문을 포함하고 있다는 것을 명시적으로 지정함.
+
+다른 소스에서 인용한 텍스트를 포함하는 ```blockquote``` 요소는 브라우저에서 시각적으로 강조하여 표시하지만, 이를 인용문임을 명시적으로 나타내지 않음. 이때 ```role="blockquote"```을 추가하여 해당 요소가 인용문임을 보조 기술 사용자에게 알려줄 수 있음. <br/>
+e.g. 글의 중요한 부분을 강조하고, 다른 작가나 출처의 의견을 인용
 
 ```html
+<blockquote role="blockquote">
+    <p>인용문입니다.</p>
+    <footer>인용 출처: <cite>출처</cite></footer>
+</blockquote>
 ```
 
 <br/>
 
 ### caption
-> 그림, 표, 그리드 또는 트리 그리드의 이름을 지정하고 설명할 수도 있는 표시 콘텐츠
+> 표나 그림과 같은 미디어 요소의 캡션을 나타내는 WAI-ARIA 속성. 해당 요소의 캡션 역할을 명시적으로 지정할 수 있음.
+> ``` ※ 캡션: 해당 요소의 내용이나 의미를 설명하는 짧은 텍스트 ```
+
+주로 table에서 ```caption```요소를 사용하며, 표 이외의 미디어 요소에서는 ```role="caption"```을 추가하여 해당 요소가 캡션임을 나타냄.
 
 ```html
+<figure role="caption">
+    <img src="example.jpg" alt="예시 이미지">
+    <figcaption>이미지 설명</figcaption>
+</figure>
 ```
 
 <br/>
 
 ### cell
-> 테이블 형식 컨테이너의 셀
+> 테이블의 셀을 나타내는 WAI-ARIA 속성. 해당 요소가 테이블의 셀임을 명시적으로 지정할 수 있음.
+> ```※ 셀: <td>요소로 테이블을 구성하는 행과 열의 교차점에 위치함```
+
+시각적으로 보이지 않는 테이블이나 데이터 표를 작성할 때 사용되는 ```div```나 ```span```으로도 테이블 구조를 작성할 수 있음. 이러할 때 ```role="cell"```을 추가해 테이블 셀임을 명시함.
 
 ```html
+<div role="table">
+    <div role="row">
+        <div role="cell">이름</div>
+        <div role="cell">나이</div>
+        <div role="cell">직업</div>
+    </div>
+    <div role="row">
+        <div role="cell">John</div>
+        <div role="cell">30</div>
+        <div role="cell">개발자</div>
+    </div>
+    <div role="row">
+        <div role="cell">Alice</div>
+        <div role="cell">25</div>
+        <div role="cell">디자이너</div>
+    </div>
+</div>
 ```
 
 <br/>
 
 ### columnheader
-> 열의 헤더 정보가 포함된 셀
+> 테이블의 열 헤더를 나타내는 WAI-ARIA 속성. 해당 요소가 열의 제목을 나타내는 역할임을 명시적으로 지정.
+> ```테이블의 열 헤더: <th>요소로 정의됨```
+
+테이블의 각 열은 해당 열의 내용을 설명하는 제목이 포함되어 있지만, 시각적으로 보인다 하여도 보조 기술을 사용하는 사용자에게는 제목이 명시적으로 표시되지 않을 수 있기 때문에 ```role="columnheader"```을 사용하여 표시함.
 
 ```html
+<table role="table">
+    <thead>
+        <tr>
+            <th role="columnheader">이름</th>
+            <th role="columnheader">나이</th>
+            <th role="columnheader">직업</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>30</td>
+            <td>개발자</td>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>25</td>
+            <td>디자이너</td>
+        </tr>
+    </tbody>
+</table>
 ```
 
 <br/>
 
 ### definition
-> 용어 또는 개념의 정의
+> 용어 정의를 나타내는 WAI-ARIA 속성. 해당 요소가 용어의 정의를 나타내는 역할임을 명시적으로 지정할 수 있음.
+
+일반적으로 용어 정의는 용어의 의미나 설명을 표시하는 데 사용되며, 보통 용어와 해당 용어의 정의를 함께 표시하는 레이아웃을 가짐.
 
 ```html
+<dl>
+    <dt>HTML</dt>
+    <dd role="definition">하이퍼텍스트 마크업 언어(HTML)는 웹 페이지를 만들기 위해 사용되는 마크업 언어입니다.</dd>
+    <dt>CSS</dt>
+    <dd role="definition">CSS(Cascading Style Sheets)는 웹 페이지의 스타일과 레이아웃을 정의하는 데 사용되는 스타일 시트 언어입니다.</dd>
+</dl>
 ```
 
 <br/>
 
 ### deletion
-> 삭제에는 삭제된 것으로 표시된 콘텐츠 또는 삭제가 제안된 콘텐츠가 포함
+> 삭제된 텍스트를 나타내는 WAI-ARIA 속성. 해당 요소가 삭제된 텍스트를 나타내는 역할임을 명시적으로 지정할 수 있음.
+
+일반적으로 문서나 콘텐츠의 수정 이력을 보여주거나 사용자에게 이전 내용과의 차이를 알려주는 데 사용됨. 문서의 변경 내용을 표시하거나 사용자가 이전 내용과 새로운 내용을 비교할 수 있도록 하는 데 유용함.
 
 ```html
+<p>
+    이 문장은 <del role="deletion">이전에 있었던 텍스트</del>를 보여줍니다.
+</p>
 ```
 
 <br/>
 
 ### document
-> 보조 기술 사용자가 읽기 모드에서 탐색할 수 있는 콘텐츠가 포함된 요소
+> 문서를 나타내는 WAI-ARIA 속성
+> ```※ 웹 페이지에서의 문서 = 전체 콘텐츠(<body>요소)```
+
+```role="document"```를 사용하여 해당 요소가 문서임을 나타내면, 보조 기술을 사용하는 사용자에게 *해당 요소가 웹 페이지의 메인 콘텐츠를 포함하고 있는 부분*임을 명확하게 전달할 수 있음.
 
 ```html
+<body role="document">
+    <header>
+        <h1>웹 페이지 제목</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#section1">섹션 1</a></li>
+            <li><a href="#section2">섹션 2</a></li>
+            <li><a href="#section3">섹션 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="section1">
+            <h2>섹션 1</h2>
+            <p>섹션 1의 내용</p>
+        </section>
+        <section id="section2">
+            <h2>섹션 2</h2>
+            <p>섹션 2의 내용</p>
+        </section>
+        <section id="section3">
+            <h2>섹션 3</h2>
+            <p>섹션 3의 내용</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 웹 페이지 저작권</p>
+    </footer>
+</body>
 ```
 
 <br/>
 
 ### emphasis
-> 하나 이상의 강조 문자
+> 텍스트의 강조를 나타내는 WAI-ARIA 속성. 해당 요소가 강조된 텍스트를 포함하고 있다는 역할을 명시적으로 지정할 수 있음.
+
+주로 ```em``` 요소나 ```strong``` 요소를 사용하여 나타내지만, 시각적으로 강조되는 텍스트가 아니더라도 특정 텍스트가 문맥상으로 강조된 의미를 가질 수 있음. 이런 경우 해당 요소에 ```role="emphasis"```를 추가하여 해당 텍스트가 강조된 역할임을 나타냄.
 
 ```html
+<p>
+    이 텍스트는 <span role="emphasis">강조된 텍스트</span>를 포함합니다.
+</p>
 ```
 
 <br/>
 
 ### feed
-> 스크롤하면 목록 끝에서 기사가 추가되거나 제거될 수 있는 스크롤 가능한 기사 목록
+> 뉴스 피드, 블로그 피드 등의 콘텐츠를 나타내는 WAI-ARIA 속성. <br/>
+> 피드 형식의 콘텐츠를 포함하고 있음을 나타냄.
+
+보통 최신 정보나 업데이트를 정기적으로 제공하는 형식으로, 사용자들이 해당 사이트의 최신 콘텐츠를 신속하게 확인할 수 있도록 함.
+e.g. 뉴스 사이트, 블로그, 소셜 미디어 등
 
 ```html
+<div role="feed">
+    <article> <!-- feed에 포함된 개별적인 콘텐츠 -->
+        <h2>새로운 블로그 포스트</h2>
+        <p>블로그 포스트 내용...</p>
+        <time datetime="2024-04-25">2024년 4월 25일</time>
+    </article>
+    <article> <!-- feed에 포함된 개별적인 콘텐츠 -->
+        <h2>최신 뉴스 기사</h2>
+        <p>뉴스 기사 내용...</p>
+        <time datetime="2024-04-24">2024년 4월 24일</time>
+    </article>
+</div>
 ```
 
 <br/>
