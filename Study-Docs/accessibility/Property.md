@@ -2,12 +2,9 @@
 ## Table of Contents
 1. [Widget attributes](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#widget-attributes)
    1. [aria-autocomplete](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-autocomplete)
-   2. [aria-checked](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-checked)
    3. [aria-disabled](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-disabled)
    4. [aria-errormessage](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-errormessage)
-   5. [aria-expanded](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-expanded)
    6. [aria-haspopup](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-haspopup)
-   7. [aria-hidden](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-hidden)
    8. [aria-invalid](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-invalid)
    9. [aria-label](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-label)
    10. [aria-level](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-level)
@@ -19,7 +16,6 @@
    16. [aria-pressed](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-pressed)
    17. [aria-readonly](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-readonly)
    18. [aria-required](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-required)
-   19. [aria-selected](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-selected)
    20. [aria-sort](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-sort)
    21. [aria-valuemax](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-valuemax)
    22. [aria-valuemin](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Property.md#aria-valuemin)
@@ -71,28 +67,6 @@ token | note
 
 <br/>
 
-### aria-checked
-> 체크 상태를 나타내는 데 사용 <br/>
-> 주로 시각적으로 체크 상태가 나타나지 않는 경우에 사용되며, 체크 박스나 라디오 버튼과 같은 UI 요소에서 활용됨
- 
-token | note
--- | --
-```true``` | 요소가 체크된 상태
-```false``` | 요소가 체크되지 않은 상태
-```mixed``` | 체크 박스가 부분적으로 체크된 상태. 주로 체크 박스 그룹에서 일부만 선택되었을 경우 사용됨.
-
-```html
-<!-- 체크 박스의 경우 -->
-<input type="checkbox" aria-checked="true">
-
-<!-- 라디오 버튼의 경우 -->
-<input type="radio" name="group1" aria-checked="false">
-<input type="radio" name="group1" aria-checked="true">
-<input type="radio" name="group1" aria-checked="false">
-```
-
-<br/>
-
 ### aria-disabled
 > 요소의 **비활성화 여부**를 나타냄
  
@@ -122,27 +96,6 @@ token | note
 
 <br/>
 
-### aria-expanded
-> 요소의 **확장 상태**를 나타냄
- 
-주로 접근성을 향상시키기 위해 사용되며, 요소가 펼쳐진 상태인지 아닌지를 전달함. <br/>
-e.g. 아코디언 메뉴, 툴팁, 드롭다운 메뉴 등
-
-token | note
--- | --
-```true``` | 요소가 펼쳐진 상태
-```false``` | 요소가 축소된 상태
-```undefined``` | 요소가 확장 가능한데도 확장 상태를 나타내는 데 적절한 정보를 제공할 수 없는 경우
-
-```html
-<button aria-expanded="false" aria-controls="content">펼치기</button>
-<div id="content" hidden>
-    내용
-</div>
-```
-
-<br/>
-
 ### aria-haspopup
 > 요소가 **하위 메뉴나 팝업을 가지고 있는지**를 나타냄
  
@@ -166,24 +119,6 @@ token | note
         <li><a href="#">메뉴 항목 2</a></li>
         <li><a href="#">메뉴 항목 3</a></li>
     </ul>
-</div>
-```
-
-<br/>
-
-### aria-hidden
-> 요소의 **가시성**을 나타냄
- 
-스크린 리더를 포함한 보조 기술을 사용하는 사용자를 위해 *화면에 표시되지 않아야 하는 요소를 식별*하기 위해 사용. CSS의 ```display``` 속성이나 ```visibility``` 속성을 사용하여 화면에서 요소를 숨길 때와 같이 **시각적으로는 보이지 않지만 보조 기술을 통해 접근할 수 있는 요소**에 사용
-
-token | note
--- | --
-```true``` | 요소가 화면에서 숨겨져 있음. 이 경우, 요소와 해당 자식 요소는 시각적으로 화면에 나타나지 않지만, *접근성 트리에는 남아 있음*.
-```false``` | ```[default]``` 요소가 화면에 표시되어 있음
-
-```html
-<div aria-hidden="true">
-    이 영역은 스크린 리더에 의해 읽히지 않습니다.
 </div>
 ```
 
@@ -401,36 +336,6 @@ token | note
 <!-- 선택 입력 필드일 경우 -->
 <label for="email">이메일:</label>
 <input type="email" id="email" aria-required="false"> <!-- aria-required 생략 가능 -->
-```
-
-<br/>
-
-### aria-selected
->  사용자가 **선택한 요소**를 나타냄
- 
-주로 *다중 선택이 가능한 요소*에서 사용되며, 사용자가 특정 항목을 선택했는지 여부를 명시적으로 나타내는 데 사용됨
-
-token | note
--- | --
-```true``` | 요소가 선택된 상태임을 나타냄
-```false``` | 요소가 선택되지 않은 상태임을 나타냄
-```undefined``` | 요소가 선택 가능하거나 현재의 선택 상태를 알 수 없는 경우에 사용
-
-```html
-<!-- 선택 가능한 항목들이 있는 리스트에서 특정 항목(항목2)을 선택한 경우 -->
-<ul>
-    <li aria-selected="true">항목 1</li>
-    <li aria-selected="false">항목 2</li>
-    <li aria-selected="false">항목 3</li>
-</ul>
-<!-- 다중 선택이 가능한 경우 여러 항목(항목1,3,4)이 선택 되어있을 수 있음 -->
-<ul>
-    <li aria-selected="true">항목 1</li>
-    <li aria-selected="false">항목 2</li>
-    <li aria-selected="true">항목 3</li>
-    <li aria-selected="true">항목 4</li>
-</ul>
-
 ```
 
 <br/>
