@@ -227,181 +227,287 @@ token | note
 <br/>
 
 ### aria-level
-> 
- 
-token | note
--- | --
-```token``` | note
+>  요소의 **수준(레벨)**을 나타냄
+
+일반적으로 트리 구조를 가진 요소에서 해당 요소의 계층적 위치를 나타낼 때 사용됨. 주로 ```헤딩(제목)```요소에 사용됨. 1부터 시작(가장 높은 수준)하여 레벨이 증가함에 따라 하위 수준으로 내려감.
 
 ```html
+<h1 aria-level="1">이 페이지의 제목</h1>
+
+<h2 aria-level="2">하위 섹션 제목</h2>
 ```
 
 <br/>
 
 ### aria-modal
-> 
+> **대화형 모달(dialog)의 역할 및 동작**을 정의
+> ```※ 모달: 사용자가 반드시 응답해야 하는 정보를 표시하고, 닫힐 때까지 기본 콘텐츠에 대한 접근을 제한함```
  
 token | note
 -- | --
-```token``` | note
+```true``` | 모달이 열려 있고, 모달 내부에 포커스가 있을 때 모달 외부의 콘텐츠에 대한 접근을 제한함
+```false``` | 모달이 열려 있지 않음
 
 ```html
+<div id="modal" role="dialog" aria-modal="true">
+    <p>모달 내용</p>
+    <button id="close-button">닫기</button>
+</div>
 ```
 
 <br/>
 
 ### aria-multiline
-> 
+> 입력 필드나 텍스트 영역이 **여러 줄의 텍스트를 입력할 수 있는지** 여부를 나타냄
  
+입력 필드나 텍스트 영역에 사용되며, 사용자가 여러 줄의 텍스트를 입력할 수 있는지를 명시적으로 나타내는 데 사용됨.
+
 token | note
 -- | --
-```token``` | note
+```true``` | 입력 필드나 텍스트 영역이 *여러 줄*의 텍스트를 입력할 수 있음
+```false``` |  필드나 텍스트 영역이 *단일 줄*의 텍스트만을 입력할 수 있음
 
 ```html
+<!-- 여러 줄의 텍스트 입력 가능 -->
+<textarea aria-multiline="true"></textarea>
+<!-- 단일 줄의 텍스트 입력 가능 -->
+<input type="text" aria-multiline="false">
 ```
 
 <br/>
 
 ### aria-multiselectable
-> 
+> 여러 개의 항목을 **동시에 선택**할 수 있는 요소
  
+주로 ```리스트```나 ```트리```와 같은 **다중 선택**이 가능한 요소에서 사용됨
+
 token | note
 -- | --
-```token``` | note
+```true``` | 여러 항목을 동시에 선택할 수 있는 요소
+```false``` | ```[default]``` 한 번에 하나의 항목만 선택할 수 있는 요소 
 
 ```html
+<!-- 다중 선택 가능 -->
+<ul aria-multiselectable="true">
+    <li>항목 1</li>
+    <li>항목 2</li>
+    <li>항목 3</li>
+</ul>
+<!-- 다중 선택 불가능 -->
+<ul>
+    <li>항목 1</li>
+    <li>항목 2</li>
+    <li>항목 3</li>
+</ul>
 ```
 
 <br/>
 
 ### aria-orientation
-> 
+> 요소의 **방향(orientation)**을 나타냄
  
+주로 ```슬라이더```, ```스크롤바``` 등과 같이 **방향이 중요한 UI 요소**에서 사용됨
+
 token | note
 -- | --
-```token``` | note
+```horizontal``` | 요소가 가로 방향으로 나타남
+```vertical``` | 요소가 세로 방향으로 나타남
 
 ```html
+<!-- 가로 방향으로 움직이는 슬라이더 -->
+<input type="range" min="0" max="100" value="50" aria-orientation="horizontal">
+<!-- 세로 방향으로 움직이는 슬라이더 -->
+<div role="scrollbar" aria-orientation="vertical">
+    <!-- 스크롤되는 콘텐츠 -->
+</div>
 ```
 
 <br/>
 
 ### aria-placeholder
-> 
+> 입력 필드의 **플레이스홀더(placeholder) 텍스트** <br/>
+> ```※ 플레이스홀더: 사용자가 입력해야 할 내용을 나타내는 짧은 설명```
  
-token | note
--- | --
-```token``` | note
+html5의 ```placeholder```속성과 유사하지만 보조기기 사용자에게 플레이스홀더 텍스트를 전달하기 위해 ```aria-placeholder```속성이 사용됨 
 
 ```html
+<!-- placeholder or aria-placeholder 둘 중 하나만 사용(의미 중복) -->
+<input type="text" placeholder="검색어를 입력하세요"> <!-- 일반적으로 권장됨 -->
+<input type="text" aria-placeholder="검색어를 입력하세요">
 ```
 
 <br/>
 
 ### aria-pressed
-> 
+> 토글(toggle) 버튼의 **눌림 상태**를 나타냄
  
 token | note
 -- | --
-```token``` | note
+```true``` | 토글 버튼이 눌려진 상태
+```false``` | 토글 버튼이 눌려지지 않은 상태
+```undefined``` | 토글 버튼이 눌릴 수 있으나 현재의 눌림 상태를 알 수 없는 경우
 
 ```html
+<button aria-pressed="false" onclick="toggleButton(this)">누르기</button>
+
+<!-- javascript로 토글 버튼 클릭되었을 때 상태 변경 -->
+function toggleButton(button) {
+    if (button.getAttribute('aria-pressed') === 'true') {
+        button.setAttribute('aria-pressed', 'false');
+    } else {
+        button.setAttribute('aria-pressed', 'true');
+    }
+}
 ```
 
 <br/>
 
 ### aria-readonly
-> 
- 
+> 사용자가 **요소의 값을 편집할 수 있는지** 여부를 나타냄
+
+주로 편집이 가능한 요소인데도 *사용자에게 읽기 전용으로 제공되어야 하는 경우* 사용됨.
+
 token | note
 -- | --
-```token``` | note
+```true``` | 요소의 값이 읽기 전용임을 나타냄. 사용자는 해당 요소 값을 편집할 수 없음.
+```false``` | ```[default]``` 요소의 값이 편집 가능함을 나타냄. 사용자는 해당 요소의 값을 편집할 수 있음.
 
 ```html
+<!-- 읽기 전용 -->
+<input type="text" value="읽기 전용 값" aria-readonly="true">
+<input type="text" value="읽기 전용 값" readonly> <!-- 권장(중복 사용x) -->
+
+<!-- 편집 가능: 입력 필드는 기본 편집 가능하기에 aria-readonly 설정하지 않아도 됨 -->
+<input type="text" value="편집 가능한 값">
 ```
 
 <br/>
 
 ### aria-required
-> 
+> 사용자가 반드시 입력해야 하는 필수 입력 필드를 나타냄
  
+주로 ```폼 요소```에서 사용되며, 사용자가 *필수적으로 값을 입력해야 하는 경우*에 시각적으로나 보조 기기를 통해 명시적으로 전달됨
+
 token | note
 -- | --
-```token``` | note
+```true``` | 입력 필드가 필수 입력 필드임을 나타냄
+```false``` | ```[default]``` 입력 필드가 선택적인 필드임을 나타냄
 
 ```html
+<!-- 필수 입력 필드일 경우 -->
+<label for="username">사용자 이름:</label>
+<input type="text" id="username" aria-required="true">
+
+<!-- 선택 입력 필드일 경우 -->
+<label for="email">이메일:</label>
+<input type="email" id="email" aria-required="false"> <!-- aria-required 생략 가능 -->
 ```
 
 <br/>
 
 ### aria-selected
-> 
+>  사용자가 **선택한 요소**를 나타냄
  
+주로 *다중 선택이 가능한 요소*에서 사용되며, 사용자가 특정 항목을 선택했는지 여부를 명시적으로 나타내는 데 사용됨
+
 token | note
 -- | --
-```token``` | note
+```true``` | 요소가 선택된 상태임을 나타냄
+```false``` | 요소가 선택되지 않은 상태임을 나타냄
+```undefined``` | 요소가 선택 가능하거나 현재의 선택 상태를 알 수 없는 경우에 사용
 
 ```html
+<!-- 선택 가능한 항목들이 있는 리스트에서 특정 항목(항목2)을 선택한 경우 -->
+<ul>
+    <li aria-selected="true">항목 1</li>
+    <li aria-selected="false">항목 2</li>
+    <li aria-selected="false">항목 3</li>
+</ul>
+<!-- 다중 선택이 가능한 경우 여러 항목(항목1,3,4)이 선택 되어있을 수 있음 -->
+<ul>
+    <li aria-selected="true">항목 1</li>
+    <li aria-selected="false">항목 2</li>
+    <li aria-selected="true">항목 3</li>
+    <li aria-selected="true">항목 4</li>
+</ul>
+
 ```
 
 <br/>
 
 ### aria-sort
-> 
+> 테이블의 열이나 리스트 등에서 **정렬된 상태**를 나타냄
  
+주로 정렬 가능한 ```테이블의 열```에서 사용되며, 열의 정렬 방향과 *현재 정렬된 상태를 사용자에게 명확하게 전달*하는 데 사용됨
+
 token | note
 -- | --
-```token``` | note
+```none``` | 열이 정렬되지 않은 상태
+```ascending``` | 열이 **오름차순**으로 정렬된 상태
+```descending``` | 열이 **내림차순**으로 정렬된 상태
 
 ```html
+<table>
+    <thead>
+        <tr>
+            <th id="name" aria-sort="ascending">이름</th>
+            <th id="age" aria-sort="none">나이</th>
+            <th id="city" aria-sort="none">도시</th>
+            <!--  
+                "이름" 열은 오름차순으로 정렬되었으며, 
+                "나이"와 "도시" 열은 정렬되지 않은 상태 
+            -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- 테이블 내용 -->
+    </tbody>
+</table>
 ```
 
 <br/>
 
 ### aria-valuemax
-> 
+> 슬라이더, 프로그레스 바 등과 같은 *범위를 나타내는 UI 요소*에서 가장 큰 값, 즉 **최댓값**을 나타냄
  
-token | note
--- | --
-```token``` | note
-
 ```html
+<input type="range" min="0" max="100" value="50" aria-valuemax="100">
+<!-- 슬라이더의 최댓값은 100 -->
 ```
 
 <br/>
 
 ### aria-valuemin
-> 
+> 슬라이더, 프로그레스 바 등과 같은 *범위를 나타내는 UI 요소*에서 가장 작은 값, 즉 **최솟값**을 나타냄
  
-token | note
--- | --
-```token``` | note
-
 ```html
+<input type="range" min="0" max="100" value="50" aria-valuemin="0">
+<!-- 슬라이더의 최솟값은 0 -->
 ```
 
 <br/>
 
 ### aria-valuenow
-> 
+> 슬라이더, 프로그레스 바 등과 같은 *범위를 나타내는 UI 요소*에서 **현재 위치나 상태에 해당하는 값**을 나타냄
  
-token | note
--- | --
-```token``` | note
+해당 요소의 값은 aria-valuemin과 aria-valuemax 사이의 값을 가져야 함
 
 ```html
+<input type="range" min="0" max="100" value="50" aria-valuenow="50">
+<!-- 슬라이더의 현재 값은 50 -->
 ```
 
 <br/>
 
 ### aria-valuetext
-> 
+> ```aria-valuenow```속성 값을 설명하는 텍스트를 제공함
  
-token | note
--- | --
-```token``` | note
+```aria-valuenow``` 속성이 설정된 경우에만 사용되며, 특정 값이 숫자로 표현하기 부족한 경우 응용할 수 있음. 해당 값이 숫자 값을 경우에는 무시되지만, 누락되었거나 숫자 값이 아닌 경우 사용됨. <br/>
+e.g. 저, 중간, 높음 등
 
 ```html
+<input type="range" min="0" max="100" value="50" aria-valuetext="50%">
+<!-- 슬라이더의 현재 값은 50%로 설명됨 -->
 ```
 
 <br/>
