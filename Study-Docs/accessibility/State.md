@@ -1,0 +1,294 @@
+# 요소의 상태
+## Table of Contents
+1. [Live region attributes]()
+    1. [aria-busy](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-busy)
+    2. [aria-live](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-live)
+    3. [aria-relevant](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-relevant)
+    4. [aria-atomic](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-atomic)
+2. [Drag-and-Drop attributes]()
+    1. [aria-dropeffect](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-dropeffect)
+    2. [aria-grabbed](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-grabbed)
+3. [Relationship attributes]()
+    1. [aria-activedescendant](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-activedescendant)
+    2. [aria-colcount](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-colcount)
+    3. [aria-colindex](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-colindex)
+    4. [aria-colspan](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-colspan)
+    5. [aria-controls](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-controls)
+    6. [aria-describedby](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-describedby)
+    7. [aria-details](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-details)
+    8. [aria-flowto](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-flowto)
+    9. [aria-labelledby](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-labelledby)
+    10. [aria-owns](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-owns)
+    11. [aria-posinset](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-posinset)
+    12. [aria-rowcount](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-rowcount)
+    13. [aria-rowindex](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-rowindex)
+    14. [aria-rowspan](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-rowspan)
+    15. [aria-roleDescription](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-roleDescription)
+    16. [aria-setsize](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-setsize)
+
+<br/>
+
+___
+___
+___
+
+<br/>
+
+### Live region attributes
+> 동적으로 업데이트되는 콘텐츠 설명
+
+<br/>
+
+#### aria-busy
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-live
+> 사용자들에게 새로운 콘텐츠나 상태 변경을 실시간으로 알려주는 데 사용 <br/>
+> 특정한 영역이나 엘리먼트가 업데이트되는 경우, 그 변경사항을 즉시 알려주는 역할
+
+token | note
+-- | --
+```off(default)``` | 실시간 업데이트를 알리지 않아야 함(변경사항이 사용자에게 중요하지 않을 때 사용)
+```assertive``` | 현재 사용자 작업을 중단하고 즉시 업데이트된 내용을 알려줌, 사용자의 주의를 끌 때 사용됨 e.g. 긴급 알림, 오류 메세지
+```polite``` | 사용자 작업을 방해하지 않고, 현재 활동이 종료되면 업데이트된 내용을 알려줌 e.g. 채팅 앱 새로운 메세지
+
+```html
+<div id="status-message" aria-live="off">
+  현재 상태: 대기 중
+</div>
+<div id="live-region" aria-live="assertive">
+  경고!
+</div>
+<div id="live-region" aria-live="polite">
+  <p>새로운 메시지가 도착했습니다!</p>
+</div>
+```
+
+<br/>
+
+#### aria-relevant
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-atomic
+> 
+ 
+
+```html
+```
+
+<br/>
+
+### Drag-and-Drop attributes
+> Relationship attributes 속성에 속하며, 관계와 상호작용을 설명함
+
+<br/>
+
+#### aria-dropeffect
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-grabbed
+> 
+ 
+
+```html
+```
+
+<br/>
+
+### Relationship attributes
+> 요소 간의 관계를 설명하기 위해 사용. <br/>
+> 보조 기술이 요소들 사이의 상호작용을 이해하고, 사용자에게 적절한 정보를 제공하는 데 도움이 됨.
+
+<br/>
+
+#### aria-activedescendant
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-colcount
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-colindex
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-colspan
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-controls
+> 사용자 인터페이스 요소 간의 관계를 명시하고 전달하는데 사용. <br/>
+> 일반적으로 대화형 컴포넌트, 위젯에서 사용됨. 버튼 클릭시 관련 패널이 열리는 경우 사용 가능.
+
+* 콘텐츠 연결: 밀접하게 연관된 요소의 관계를 명시적으로 나타내야 할 때
+* 상호작용 요소 제어: 다른 요소의 동작을 제어하거나 영향을 미칠 때
+
+```html
+<ul role="tablist">
+    <li role="tab" aria-selected="true" aria-controls="a1" tabindex="0" id="tab1">tab1</li>
+    <li role="tab" aria-selected="false" aria-controls="b1" tabindex="-1" id="tab2">tab2</li>
+</ul>
+<div role="tabpanel" aria-labelledby="tab1" aria-expanded="true" tabindex="0" id="a1">
+    tab1 내용
+</div>
+```
+> 탭이 관리하는 탭 패널의 ID값을 넣어주고, 탭을 클릭하여 패널이 expanded되었을 때 초점이 이동하도록 tabindex=0을 부여해줌
+
+
+<br/>
+
+#### aria-describedby
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-details
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-flowto
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-labelledby
+> 요소의 레이블로서 DOM에 있는 다른 요소의 ID를 지정 가능함. **해당 텍스트 영역과 현재 요소를 연결**할 때 사용됨 <br/>
+> 레이블을 지정하는 대상이 레이블을 지정하는 주제로 참조. 네이티브 레이블링 매커니즘을 무시하므로 aria-labelledby내용이 최우선이 됨
+
+* 라벨을 명시적으로 제공할 필요가 있는 경우: 라벨이 엘리먼트와 분리되어 있거나, 보이지 않을 경우 사용
+* 다른 엘리먼트에서 생성된 라벨 사용시: <label>로 연결된 라벨 사용 대신 타 엘리먼트에서 생성된 라벨을 사용할 때
+* 다국어 지원: 여러 언어로 라벨 제공할 때
+* 컨트롤과 연관된 라벨: 버튼이나 입력 필드와 같은 컨트롤에 대한 설명 제공
+
+```html
+<button id="schedule-button">스케줄 조회</button>
+<div id="schedule-info" aria-labelledby="schedule-button">
+    이 버튼을 클릭하여 스케줄을 조회할 수 있습니다.
+</div>
+```
+>  ```div#schedule-info``` 엘리먼트는 스케줄 조회 버튼과 연관된 정보를 제공함. 
+
+
+<br/>
+
+#### aria-owns
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-posinset
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-rowcount
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-rowindex
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-rowspan
+> 
+ 
+
+```html
+```
+
+<br/>
+
+#### aria-roleDescription
+> 요소의 역할(role)을 커스터마이징 하여 전달함, **정해진 요소의 역할을 더 명확하게 만드는 데 사용**
+
+* 역할 설명에 대한 속성, 장문의 설명이 아닌 **요소의 역할을 명확하게 세분화**하기 위해 사용. 요소의 의미를 무시하고 덮어씌움
+* aria나 네이티브 html에서 정의된 요소 유형에 해당되어야 함
+* 되도록 **사용자 상호작용이 없는 요소**에 사용하는 것이 바람직함
+    * Android에서는 제대로 지원하지 않음. 의도와 다르게 읽힐 수 있음을 주의해야 함
+* **컴포넌트에 대한 지역화** 필요
+    * 접속 사용자의 기기, 국가별 언어 반드시 고려 필요. 언어별로 텍스트를 다르게 준다면 해결됨
+
+```html
+<a href="...." aria-roledescription="Banner link"> 가을 난방 30% 할인 </a>
+```
+
+<br/>
+
+#### aria-setsize
+> 
+ 
+
+```html
+```
+
+<br/>
