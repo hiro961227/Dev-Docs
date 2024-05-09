@@ -49,6 +49,10 @@ token | note
 <input type="radio" name="group1" aria-checked="false">
 ```
 
+> **역할 사용**: [checkbox](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#checkbox) | [option](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#option) | [radio](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#radio) <br/>
+> **역할 상속**: [menuitemcheckbox](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#menuitemcheckbox) | [menuitemradio](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#menuitemradio) | [treeitem](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#treeitem)
+
+
 <br/>
 
 ### aria-disabled
@@ -64,6 +68,8 @@ token | note
 ```html
 <button aria-disabled="true">클릭할 수 없는 버튼</button>
 ```
+
+> **역할 사용** 기본 마크업의 모든 요소에서 사용 가능
 
 <br/>
 
@@ -86,6 +92,8 @@ token | note
 -->
 ```
 
+> **역할 사용** 기본 마크업의 모든 요소에서 사용 가능
+
 <br/>
 
 
@@ -107,6 +115,10 @@ token | note
     내용
 </div>
 ```
+
+> **역할 사용**: [button](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#button) | [combobox](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#combobox) | [document](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#document) | [link](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#link) | [section](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#section) | [sectionhead](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#sectionhead) | [window](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#window) <br/>
+> **역할 상속**: [alert](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#alert) | [alertdialog](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#alertdialog) | [article](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#article) | [banner](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#banner) | [cell](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#cell) | [columnheader](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | [complementary](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#complementary) | [contentinfo](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#contentinfo) | [definition](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#definition) | [dialog](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#dialog) | [directory](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#directory) | [feed](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#feed) | [figure](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#figure) | [form](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#form) | [grid](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#grid) | [gridcell](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#gridcell) | [group](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#group) | [heading](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#heading) | [img](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#img) | [landmark](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#landmark) | [list](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#list) | [listbox](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#listbox) | [log](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#log) | [main](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#main) | [marquee](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#marquee) | [math](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#math) | [menu](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#menu) | [menubar](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#menubar) | [navegation](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#navegation) | [note](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#note) | [progressbar](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#progressbar) | [radiogroup](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#radiogroup) | [region](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#region) | [row](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | [rowheader](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | [search](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#search) | [select](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#select) | [status](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#status) | [tab](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#tab) | [table](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#table) | [tabpanel](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#tabpanel) | [term](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#term) | [timer](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#timer) | [toolbar](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#toolbar) | [tooltip](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#tooltip) | [tree](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#tree) | [treegrid](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#treegrid) | [treeitem](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#treeitem)
+
 
 <br/>
 
@@ -132,6 +144,9 @@ function toggleButton(button) {
     }
 }
 ```
+
+> **역할 사용**: [button](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#button)
+
 
 <br/>
 
@@ -160,8 +175,11 @@ token | note
     <li aria-selected="true">항목 3</li>
     <li aria-selected="true">항목 4</li>
 </ul>
-
 ```
+
+
+> **역할 사용**: [gridcell](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#gridcell) | [option](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#option) | [row](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#row) | [tab](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#tab) <br/>
+> **역할 상속**: [columnheader](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader) | [rowheader](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#rowheader) | [treeitem](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#treeitem)
 
 <br/>
 
@@ -181,6 +199,8 @@ token | note
     이 영역은 스크린 리더에 의해 읽히지 않습니다.
 </div>
 ```
+
+> **역할 사용** 기본 마크업의 모든 요소에서 사용 가능
 
 <br/>
 
@@ -211,6 +231,8 @@ token | note
 -->
 ```
 
+> **역할 사용** 기본 마크업의 모든 요소에서 사용 가능
+
 <br/>
 
 ## Drag-and-Drop attributes
@@ -237,6 +259,8 @@ token | note
 -->
 ```
 
+> **역할 사용** 기본 마크업의 모든 요소에서 사용 가능
+
 <br/>
 
 ## Relationship attributes
@@ -257,5 +281,8 @@ token | note
     <button role="tab" aria-selected="false">탭 3</button>
 </div>
 ```
+
+> **역할 사용** 기본 마크업의 모든 요소에서 사용 가능
+
 
 <br/>
