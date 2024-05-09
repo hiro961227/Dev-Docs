@@ -1,5 +1,4 @@
-# 요소의 역할
-## Table of Contents
+# Table of Contents
 1. [Abstract(추상적)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#abstract%EC%B6%94%EC%83%81%EC%A0%81)
    * [command](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#command)
    * [composite](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#composite)
@@ -7,6 +6,7 @@
    * [landmark](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#landmark)
    * [range](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#range)
    * [section](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#section)
+   * [sectionhead](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#sectionhead)
    * [select](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#select)
    * [widget](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#widget)
    * [window](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#window)
@@ -49,6 +49,7 @@
    * [columnheader](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#columnheader)
    * [definition](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#definition)
    * [deletion](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#deletion)
+   * [directory](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#directory)
    * [document](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#document)
    * [emphasis](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#emphasis)
    * [feed](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/Role.md#feed)
@@ -200,7 +201,7 @@ role="landmark" | note.
 <br/>
 
 ### range
-> 사용자가 범위 내의 값을 선택할 수 있는 조절기(슬라이더)와 같은 역할을 나타냄 <br/>
+> 사용자가 범위 내의 값을 선택할 수 있는 **조절기(슬라이더)와 같은 역할**을 나타냄 <br/>
 > 주로 범위 입력 요소에 사용되며, 사용자가 값을 선택하고 조절할 수 있는 UI 컨트롤
 
 e.g.  사용자가 값의 범위를 선택하고 조절하는 데 사용할 수 있는 슬라이더, 스핀박스
@@ -214,8 +215,8 @@ e.g.  사용자가 값의 범위를 선택하고 조절하는 데 사용할 수 
 <br/>
 
 ### section
-> 웹 페이지 내에서 독립적인 섹션을 나타내는 데 사용 <br/>
-> 일반적으로 콘텐츠를 논리적으로 그룹화하는 데 사용되며, 이 그룹은 주로 제목(h1~h6)과 함께 사용됨 <br/>
+> 웹 페이지 내에서 **독립적인 섹션**을 나타내는 데 사용 <br/>
+> 일반적으로 콘텐츠를 논리적으로 그룹화하는 데 사용되며, 이 그룹은 주로 *제목(h1~h6)과 함께 사용*됨 <br/>
 > 논리적으로 관련된 콘텐츠를 그룹화하고 이러한 섹션을 스크린 리더 등의 보조 기술을 사용하는 사용자에게 명시적으로 전달하는 데 사용
 
 ```html
@@ -235,8 +236,29 @@ e.g.  사용자가 값의 범위를 선택하고 조절하는 데 사용할 수 
 
 <br/>
 
+### sectionhead
+> 웹 페이지의 **섹션 헤더**를 나타내는 WAI-ARIA 역할
+
+아래 같은 요소와 함께 사용됨 <br/>
+1. ```h1 ~ h6```: html제목 요소를 사용하여 섹션 헤더 표시
+2. ```header```: 웹 페이지 또는 섹션의 헤더를 나타냄
+3. ```div```: 섹션 헤더를 나타내는 일반적인 요소
+
+```html
+<section>
+    <h2 role="sectionhead">이번 주의 이벤트</h2>
+    <ul>
+        <li>워크샵: 웹 접근성</li>
+        <li>세미나: AI 기술의 미래</li>
+        <li>네트워킹 파티</li>
+    </ul>
+</section>
+```
+
+<br/>
+
 ### select
-> 사용자가 선택할 수 있는 옵션 목록을 나타내는 WAI-ARIA 속성
+> 사용자가 선택할 수 있는 **옵션 목록**을 나타내는 WAI-ARIA 속성
 
 e.g. ```드롭다운 메뉴```, ```콤보박스```
 
@@ -1071,6 +1093,25 @@ e.g. 글의 중요한 부분을 강조하고, 다른 작가나 출처의 의견�
 <p>
     이 문장은 <del role="deletion">이전에 있었던 텍스트</del>를 보여줍니다.
 </p>
+```
+
+<br/>
+
+### directory
+> 웹 페이지의 디렉토리(목록)를 나타내는 데 사용되는 WAI-ARIA 역할 <br/>
+
+일반적으로 파일 시스템의 폴더 구조와 유사하게 구성되며, 아래와 같은 요소와 함께 사용됨 <br/>
+1. ```ul```: 비순서형 목록을 사용하여 디렉토리를 나타냄
+2. ```ol```: 순서형 목록을 사용하여 디렉토리를 나타냄
+3. ```li```: ul, ol 내부에 속하며, 각각의 항목은 디렉토리의 하위 항목을 나타냄
+
+```html
+<ul role="directory">
+    <li><a href="#">Documents</a></li>
+    <li><a href="#">Downloads</a></li>
+    <li><a href="#">Pictures</a></li>
+    <li><a href="#">Videos</a></li>
+</ul>
 ```
 
 <br/>
