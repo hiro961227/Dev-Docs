@@ -3,17 +3,10 @@
 1. [Widget attributes](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#widget-attributes)
    1. [aria-checked](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-checked)
    3. [aria-disabled](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-disabled)
-   4. [aria-errormessage](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-errormessage)
    8. [aria-invalid](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-invalid)
-   10. [aria-level](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-level)
    2. [aria-expanded](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-expanded)
-   3. [aria-modal](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-modal)
-   12. [aria-multiline](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-multiline)
-   13. [aria-multiselectable](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-multiselectable)
-   14. [aria-orientation](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-orientation)
    16. [aria-pressed](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-pressed)
    4. [aria-selected](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-selected)
-   20. [aria-sort](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-sort)
    5. [aria-hidden](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-hidden)
 2. [Live region attributes](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#live-region-attributes)
     1. [aria-busy](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-busy)
@@ -74,20 +67,6 @@ token | note
 
 <br/>
 
-### aria-errormessage
-> 요소의 **오류 메시지**를 나타냄
-
-주로 입력 필드나 폼 요소와 같은 사용자 입력을 받는 요소에 사용됨. 해당 요소에 오류가 있을 경우, 오류 메세지를 제공하여 사용자에게 오류 상황을 알림. 해당 속성은 ***오류 메세지를 포함하는 요소의 ID***를 참조함.
-
-```html
-<div id="error-message" role="alert">이 필드는 필수입니다.</div>
-
-<input type="text" aria-errormessage="error-message" aria-invalid="true">
-```
-
-<br/>
-
-
 ### aria-invalid
 > 입력 **필드의 유효성**을 나타내는 데 사용 <br/>
 
@@ -109,17 +88,6 @@ token | note
 
 <br/>
 
-### aria-level
->  요소의 **수준(레벨)**을 나타냄
-
-일반적으로 트리 구조를 가진 요소에서 해당 요소의 계층적 위치를 나타낼 때 사용됨. 주로 ```헤딩(제목)```요소에 사용됨. 1부터 시작(가장 높은 수준)하여 레벨이 증가함에 따라 하위 수준으로 내려감.
-
-```html
-<h1 aria-level="1">이 페이지의 제목</h1>
-
-<h2 aria-level="2">하위 섹션 제목</h2>
-```
-<br/>
 
 ### aria-expanded
 > 요소의 **확장 상태**를 나타냄
@@ -137,92 +105,6 @@ token | note
 <button aria-expanded="false" aria-controls="content">펼치기</button>
 <div id="content" hidden>
     내용
-</div>
-```
-
-<br/>
-
-
-### aria-modal
-> **대화형 모달(dialog)의 역할 및 동작**을 정의 <br/>
-> ```※ 모달: 사용자가 반드시 응답해야 하는 정보를 표시하고, 닫힐 때까지 기본 콘텐츠에 대한 접근을 제한함```
- 
-token | note
--- | --
-```true``` | 모달이 열려 있고, 모달 내부에 포커스가 있을 때 모달 외부의 콘텐츠에 대한 접근을 제한함
-```false``` | 모달이 열려 있지 않음
-
-```html
-<div id="modal" role="dialog" aria-modal="true">
-    <p>모달 내용</p>
-    <button id="close-button">닫기</button>
-</div>
-```
-
-<br/>
-
-### aria-multiline
-> 입력 필드나 텍스트 영역이 **여러 줄의 텍스트를 입력할 수 있는지** 여부를 나타냄
- 
-입력 필드나 텍스트 영역에 사용되며, 사용자가 여러 줄의 텍스트를 입력할 수 있는지를 명시적으로 나타내는 데 사용됨.
-
-token | note
--- | --
-```true``` | 입력 필드나 텍스트 영역이 *여러 줄*의 텍스트를 입력할 수 있음
-```false``` |  필드나 텍스트 영역이 *단일 줄*의 텍스트만을 입력할 수 있음
-
-```html
-<!-- 여러 줄의 텍스트 입력 가능 -->
-<textarea aria-multiline="true"></textarea>
-<!-- 단일 줄의 텍스트 입력 가능 -->
-<input type="text" aria-multiline="false">
-```
-
-<br/>
-
-### aria-multiselectable
-> 여러 개의 항목을 **동시에 선택**할 수 있는 요소
- 
-주로 ```리스트```나 ```트리```와 같은 **다중 선택**이 가능한 요소에서 사용됨
-
-token | note
--- | --
-```true``` | 여러 항목을 동시에 선택할 수 있는 요소
-```false``` | ```[default]``` 한 번에 하나의 항목만 선택할 수 있는 요소 
-
-```html
-<!-- 다중 선택 가능 -->
-<ul aria-multiselectable="true">
-    <li>항목 1</li>
-    <li>항목 2</li>
-    <li>항목 3</li>
-</ul>
-<!-- 다중 선택 불가능 -->
-<ul>
-    <li>항목 1</li>
-    <li>항목 2</li>
-    <li>항목 3</li>
-</ul>
-```
-
-<br/>
-
-### aria-orientation
-> 요소의 **방향(orientation)**을 나타냄
- 
-주로 ```슬라이더```, ```스크롤바``` 등과 같이 **방향이 중요한 UI 요소**에서 사용됨
-
-token | note
--- | --
-```horizontal``` | 요소가 가로 방향으로 나타남
-```vertical``` | 요소가 세로 방향으로 나타남
-
-```html
-<!-- 가로 방향으로 움직이는 슬라이더 -->
-<input type="range" min="0" max="100" value="50" aria-orientation="horizontal">
-<!-- 세로 방향으로 움직이는 슬라이더 -->
-<div role="scrollbar" aria-orientation="vertical">
-    <!-- 스크롤되는 콘텐츠 -->
 </div>
 ```
 
@@ -283,38 +165,6 @@ token | note
 
 <br/>
 
-
-### aria-sort
-> 테이블의 열이나 리스트 등에서 **정렬된 상태**를 나타냄
- 
-주로 정렬 가능한 ```테이블의 열```에서 사용되며, 열의 정렬 방향과 *현재 정렬된 상태를 사용자에게 명확하게 전달*하는 데 사용됨
-
-token | note
--- | --
-```none``` | 열이 정렬되지 않은 상태
-```ascending``` | 열이 **오름차순**으로 정렬된 상태
-```descending``` | 열이 **내림차순**으로 정렬된 상태
-
-```html
-<table>
-    <thead>
-        <tr>
-            <th id="name" aria-sort="ascending">이름</th>
-            <th id="age" aria-sort="none">나이</th>
-            <th id="city" aria-sort="none">도시</th>
-            <!--  
-                "이름" 열은 오름차순으로 정렬되었으며, 
-                "나이"와 "도시" 열은 정렬되지 않은 상태 
-            -->
-        </tr>
-    </thead>
-    <tbody>
-        <!-- 테이블 내용 -->
-    </tbody>
-</table>
-```
-
-<br/>
 
 ### aria-hidden
 > 요소의 **가시성**을 나타냄
