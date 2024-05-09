@@ -18,7 +18,7 @@
 2. [Live region attributes](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#live-region-attributes)
     1. [aria-busy](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-busy)
 3. [Drag-and-Drop attributes](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#drag-and-drop-attributes)
-    2. [aria-grabbed](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-grabbed)
+   1. [aria-grabbed](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-grabbed)
 4. [Relationship attributes](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#relationship-attributes)
     1. [aria-current](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/State.md#aria-current)
    
