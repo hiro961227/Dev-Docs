@@ -25,6 +25,11 @@
 
 <br/>
 
+# [웹 접근성(Web Accessibility)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md)
+> 장애인, 고령자 등 ***모든 사람들***이 웹 사이트에서 제공하는 정보를 **동등하게 접근하고 이용**할 수 있도록 보장
+
+<br/>
+
 ***
 
 > [Role 참고 사이트](https://www.w3.org/TR/wai-aria/#roles_categorization) <br/>
