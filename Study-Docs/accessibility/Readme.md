@@ -1,6 +1,9 @@
 
-# [웹 접근성(Web Accessibility)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md)
+# 웹 접근성(Web Accessibility)
 > 장애인, 고령자 등 ***모든 사람들***이 웹 사이트에서 제공하는 정보를 **동등하게 접근하고 이용**할 수 있도록 보장
+
+## [웹 콘텐츠 접근성 가이드라인(WCAG)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md)
+> 인식의 용이성, 운용의 용이성, 이해의 용이성, 견고함
 
 <br/>
 
