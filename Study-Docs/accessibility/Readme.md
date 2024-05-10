@@ -1,3 +1,10 @@
+
+# [웹 접근성(Web Accessibility)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md)
+> 장애인, 고령자 등 ***모든 사람들***이 웹 사이트에서 제공하는 정보를 **동등하게 접근하고 이용**할 수 있도록 보장
+
+<br/>
+
+
 # WAI-ARIA
 > Web Accessibility Initiative – Accessible Rich Internet Applications <br/>
 > W3C 에서 정의한 기술로 웹 접근성을 위해 지원되는 여러 가지 특성들을 의미 <br/>
@@ -22,11 +29,6 @@
 > 요소의 ```동적인 상태```나 ```상호 작용```에 관련된 정보를 나타냄. ***사용자의 상호 작용에 따라 변할 수 있는 정보***를 의미함. <br/>
 > 주로 ```요소의 상태```를 설명하고, 보조 기술이 요소의 **변화를 실시간으로 인식**할 수 있도록 도움. <br/>
 > 보통 여러 값을 가질 수 있음
-
-<br/>
-
-# [웹 접근성(Web Accessibility)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md)
-> 장애인, 고령자 등 ***모든 사람들***이 웹 사이트에서 제공하는 정보를 **동등하게 접근하고 이용**할 수 있도록 보장
 
 <br/>
 
