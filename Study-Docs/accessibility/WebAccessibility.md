@@ -499,8 +499,8 @@ e.g. 인증 번호 연장 버튼 등
 2. 오류 내용 및 정정 수단 제공
    > 오류의 원인을 알 수 있도록 *적절한 설명 텍스트*를 제공
    ```html
-<label for="user_ymd">생년월일<span class="info_txt">형식: yyyy-mm-dd</span></label>
-<input type="text" id="user_ymd" />
+   <label for="user_ymd">생년월일<span class="info_txt">형식: yyyy-mm-dd</span></label>
+   <input type="text" id="user_ymd" />
    ```
 3. 오류 *발생 시점으로 초점 이동*
    > 오류가 발생한 서식으로 초점 이동
