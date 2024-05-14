@@ -1,4 +1,4 @@
-# 웹 접근성
+# 웹 콘텐츠 접근성 지침(WCAG)2 
 ## Table of Contents
 1. [인식의 용이성(perceivable)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#인식의-용이성)
    1. [적절한 대체 텍스트 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#적절한-대체-텍스트-제공)
