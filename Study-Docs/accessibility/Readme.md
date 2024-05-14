@@ -61,4 +61,5 @@
 
 > [Role 참고 사이트](https://www.w3.org/TR/wai-aria/#roles_categorization) <br/>
 > [Property, State 참고 사이트](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes) <br/>
-> [wai-aria 1.1 참고](https://www.digitala11y.com/wai-aria-1-1-cheat-sheet/)
+> [wai-aria 1.1 참고](https://www.digitala11y.com/wai-aria-1-1-cheat-sheet/) <br/>
+> [W3C접근성 기준 개요](https://www.w3.org/WAI/standards-guidelines/ko)
