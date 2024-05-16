@@ -1,12 +1,15 @@
-# 웹 콘텐츠 접근성 지침(WCAG)2 
+# 웹 콘텐츠 접근성 지침(WCAG)2
 ## Table of Contents
 1. [인식의 용이성(perceivable)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#인식의-용이성)
    1. [적절한 대체 텍스트 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#적절한-대체-텍스트-제공)
-   2. [색에 무관한 콘텐츠 인식](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#색에-무관한-콘텐츠-인식)
-   3. [명확한 지시 사항 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#명확한-지시-사항-제공)
-   4. [텍스트 콘텐츠의 명도 대비](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#텍스트-콘텐츠의-명도-대비)
-   5. [배경음 사용 금지](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#배경음-사용-금지)
-   6. [콘텐츠 간의 구분](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#콘텐츠-간의-구분)
+   2. [자막 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#자막-제공)
+   4. [표의 구성](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#표의-구성)
+   3. [콘텐츠의 선형 구조](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#콘텐츠의-선형-구조)
+   5. [명확한 지시 사항 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#명확한-지시-사항-제공)
+   6. [색에 무관한 콘텐츠 인식](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#색에-무관한-콘텐츠-인식)
+   7. [자동 재생 금지](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#배경음-사용-금지)
+   8. [텍스트 콘텐츠의 명도 대비](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#텍스트-콘텐츠의-명도-대비)
+   9. [콘텐츠 간의 구분](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#콘텐츠-간의-구분)
 2. [운용의 용이성(operable)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#운용의-용이성)
    1. [키보드 사용 보장](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#키보드-사용-보장)
    2. [초점 이동](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#초점-이동)
@@ -20,10 +23,8 @@
 3. [이해의 용이성(understandable)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#이해의-용이성)
    1. [기본 언어 표시](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#기본-언어-표시)
    2. [사용자 요구에 따른 실행](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#사용자-요구에-따른-실행)
-   3. [콘텐츠의 선형 구조](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#콘텐츠의-선형-구조)
-   4. [표의 구성](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#표의-구성)
-   5. [레이블 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#레이블-제공)
-   6. [오류 정정](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#오류-정정)
+   4. [레이블 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#레이블-제공)
+   5. [오류 정정](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#오류-정정)
 4. [견고성(robust)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#견고성)
    1. [마크업 오류 방지](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#마크업-오류-방지)
    2. [웹 애플리케이션 자체 접근성](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#웹-애플리케이션-자체-접근성)
@@ -108,25 +109,51 @@
 ***
 
 #### 자막제공
-> 멀티미디어 콘텐츠에는 콘텐츠와 동등한 내용의 ```자막```, ```대본``` 또는 ```수화``` 제공을 해야 함 <br/>
+> 멀티미디어 콘텐츠에는 콘텐츠와 동등한 내용의 ```자막```, ```대본``` 또는 ```수어``` 제공을 해야 함 <br/>
 > 주의할 점: **자동 소리 재생 기능 금지**
 
 1) 영상, 이미지 정보를 제공할 경우 시각 정보나 음성 정보에 대해 요약하지 않고 **빠짐없이 전달**해야 함
 2) 음성이 나오지 않는 멀티미디어의 경우, **원고** 등의 **대체 콘텐츠를 제공**해야 함
-3) 영상의 자막을 시청하거나 음성을 듣기 어려운 경우, *시각*을 통해 내용을 이해할 수 있도록 해야 함 (**수화**를 제공할 경우 충분한 해상도 제공 필요)
+3) 영상의 자막을 시청하거나 음성을 듣기 어려운 경우, *시각*을 통해 내용을 이해할 수 있도록 해야 함 (**수어**를 제공할 경우 충분한 해상도 제공 필요)
 
 <br/>
 
-### <명료성>
+### <적응성>
 ***
 
-#### 색에 무관한 콘텐츠 인식
-> 특정 색을 구분할 수 없거나, 흑백 디스플레이 사용자와 같이 색상만으로 콘텐츠를 구분할 수 없는 경우가 있기에 콘텐츠는 **색에 관계없이 인식**될 수 있어야 함. *두 가지 이상의 구분자*를 사용하는 것이 좋음
+#### 표의 구성
+> 이해하기 쉽게 구성해야 함 <br/>
+> [참고 사이트](https://worker-k.tistory.com/entry/table-%ED%83%9C%EA%B7%B8-%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-caption-scope-%EC%A4%91%EC%8B%AC%EC%9C%BC%EB%A1%9C)
 
-1) 색만으로 구분하지 않고 **색의 의미**를 텍스트로 추가 제공함
-2) 그래프의 경우 **모양, 무늬, 굵기, 패턴** 등 다양한 방법으로 구분할 수 있도록 제공하며, 색을 사용할 경우 *색이 의미하고 있는 내용을 추가로 설명*함 
-3) 선택 표시를 색으로 구분할 경우 **테두리, 구분선, 밑줄** 등으로 *추가 표시*함
-e.g. 슬라이드 버튼, 페이지네이션, 탭 버튼 etc.
+※ 데이터가 아닌 콘텐츠는 table로 마크업하지 않길 권장 <br/>
+※ scope: 스크린 리더기에서 읽히는 순서에 관여함. thead의 th scope="col"속성부터 읽게 됨.
+
+1) 데이터 테이블
+   > 표에 적절한 *제목과 요약 정보* 제공
+   * scope 속성을 가지고 있는 th 존재
+   * caption 가지고 있음
+   * thead 영역에는 td태그가 올 수 없음
+   * tbody만 사용하거나 thead와 tbody만 있는 경우, thead tbody tfoot은 생략 가능하며 한 테이블에 여러 번 사용해도 상관 없음
+2) 복잡한 테이블
+   > 복잡하지 않은 간단한 표로 제공하거나 scope, id, headers를 적용함
+   * th, caption, scope 사용 안함
+3) 레이아웃 테이블
+   > 디자인을 위한 표는 표로 인식하지 않도록 제목과 요약 내용을 제공하지 않음. <br/>
+   > 만약 table로 제공한 경우, caption(제목)과 summary(표 내부에 대한 설명)를 제공하지 않아야 함
+4) 중첩 테이블
+   > 표의 정보를 이해하기 어려운 중첩 표를 넣어 정보를 제공하지 말 것
+
+<br/>
+
+
+#### 콘텐츠의 선형 구조
+> 콘텐츠는 논리적인 순서로 제공해야 함
+
+1) 탭 콘텐츠
+   > 제목-내용-제목-내용 순서로 마크업 or 내용에 대한 제목을 숨김처리
+2) 더보기 콘텐츠
+   > 제목-내용-더보기 순서
+
 
 <br/>
 
@@ -145,7 +172,8 @@ e.g. 슬라이드 버튼, 페이지네이션, 탭 버튼 etc.
 <button>나의 정보 확인하기</button>
 ```
 
-3) 색으로만 정보 제공
+3) 색으로만 정보 제공하지 않기
+   > 색상만으로 정보 전달, 행동 지시, 반응 유발, 시각적 요소를 식별하는 용도로 사용하면 안 됨
 ```html
 <!-- 오류 사항 -->
 <p>보라색 지역은 관할 지역입니다</p>
@@ -153,6 +181,29 @@ e.g. 슬라이드 버튼, 페이지네이션, 탭 버튼 etc.
 <p>서울, 경기, 인천지역은 관할 지역입니다</p>
 ```
 
+
+<br/>
+
+### <명료성>
+***
+
+#### 색에 무관한 콘텐츠 인식
+> 특정 색을 구분할 수 없거나, 흑백 디스플레이 사용자와 같이 색상만으로 콘텐츠를 구분할 수 없는 경우가 있기에 콘텐츠는 **색에 관계없이 인식**될 수 있어야 함. *두 가지 이상의 구분자*를 사용하는 것이 좋음
+
+1) 색만으로 구분하지 않고 **색의 의미**를 텍스트로 추가 제공함
+2) 그래프의 경우 **모양, 무늬, 굵기, 패턴** 등 다양한 방법으로 구분할 수 있도록 제공하며, 색을 사용할 경우 *색이 의미하고 있는 내용을 추가로 설명*함 
+3) 선택 표시를 색으로 구분할 경우 **테두리, 구분선, 밑줄** 등으로 *추가 표시*함
+e.g. 슬라이드 버튼, 페이지네이션, 탭 버튼 etc.
+
+<br/>
+
+
+#### 배경음 사용 금지
+> 배경음 등 **자동으로 소리가 재생되지 않아**야 하며, 사용자 입력 및 컨트롤을 조작이 가능하도록 제공되어야 함
+
+화면 낭독 프로그램 사용자가 콘텐츠를 인식하고 사용하는 데 방해받을 수 있기에 3초 이상의 배경음은 자동 재생되지 않도록 제공되어야 함. <br/><br/>
+
+자동 재생 배경음은 **3초 내에 멈추**거나, 소스 상에서 **가장 먼저 제공**해 정지 기능이 실행 가능하도록 하거나, 지정된 키(e.g. esc키)를 누르면 재생을 멈추도록 구현해야 함
 
 <br/>
 
@@ -177,14 +228,6 @@ e.g. 슬라이드 버튼, 페이지네이션, 탭 버튼 etc.
 
 <br/>
 
-#### 배경음 사용 금지
-> 배경음 등 **자동으로 소리가 재생되지 않아**야 하며, 사용자 입력 및 컨트롤을 조작이 가능하도록 제공되어야 함
-
-화면 낭독 프로그램 사용자가 콘텐츠를 인식하고 사용하는 데 방해받을 수 있기에 3초 이상의 배경음은 자동 재생되지 않도록 제공되어야 함. <br/><br/>
-
-자동 재생 배경음은 **3초 내에 멈추**거나, 소스 상에서 **가장 먼저 제공**해 정지 기능이 실행 가능하도록 하거나, 지정된 키(e.g. esc키)를 누르면 재생을 멈추도록 구현해야 함
-
-<br/>
 
 #### 콘텐츠 간의 구분
 > 이웃한 콘텐츠는 *시각적으로 구별*될 수 있어야 함 
@@ -199,6 +242,8 @@ e.g. 슬라이드 버튼, 페이지네이션, 탭 버튼 etc.
 ***
 
 <br/>
+
+
 
 ### 운용의 용이성
 > 사용자 인터페이스 구성 요소는 조작 가능하고 내비게이션 할 수 있어야 한다
@@ -250,6 +295,10 @@ e.g. <br/>
    - 모바일의 경우 터치 오류를 최소화하기 위해 [가로 * 세로 = 9mm * 9mm]이상으로 제작, 2단 구성의 컨텐츠 제작 시 [13mm * 13mm]로 제작 권고
 2. 콘텐츠 테두리 안쪽으로 **1px 이상의 여백** 존재
 
+<br/>
+
+#### 문자 단축키
+> 문자 단축키는 오동작으로 인한 **오류를 방지**하여야 함
 
 <br/>
 
@@ -372,6 +421,41 @@ e.g. 인증 번호 연장 버튼 등
 <!-- 개선 사항 -->
 <a href="#">다음 콘텐츠 보기</a>
 ```
+6) 한국어 설정 시 영어로 제공된 정보는 의도되지 않은 발음으로 읽힐 수 있기에 한국어로 레이블을 명확하게 설정해 제공
+```html
+<a herf="#" title="테스트 이미지 바로가기 새 창 열림">
+   <img src="testImg.png" alt="테스트 이미지" >
+</a>
+```
+
+<br/>
+
+#### 고정된 참조 위치 정보
+> 전자출판문서 형식의 웹 페이지는 각 페이지로 이동할 수 있는 기능이 있어야 하고, 서식이나 플랫폼에 상관없이 **참조 위치 정보를 일관되게 제공ㆍ유지**해야 함
+
+<br/>
+
+
+### <쉬운 내비게이션>
+***
+
+#### 단일 포인터 입력 지원
+> 다중 포인터 또는 경로기반 동작을 통한 입력은 **단일 포인터 입력으로도 조작**할 수 있어야 함
+
+<br/>
+
+#### 포인터 입력 취소
+> **단일 포인터 입력으로 실행되는 기능은 취소**할 수 있어야함
+
+<br/>
+
+#### 레이블과 네임
+> 텍스트 또는 텍스트 이미지가 포함된 레이블이 있는 사용자 인터페이스 구성요소는 **네임에 시각적으로 표시되는 해당 텍스트를 포함**해함
+
+<br/>
+
+#### 동작기반 작동 
+> 동작기반으로 작동하는 기능은 **사용자 인터페이스 구성요소로 조작**할 수 있고, 동작기반 기능을 비활성화할 수 있어야 함.
 
 <br/>
 
@@ -381,14 +465,13 @@ e.g. 인증 번호 연장 버튼 등
 
 
 ### 이해의 용이성
-> 콘텐츠는 이해할 수 있어야 한다
+> 사용자가 서비스의 콘텐츠, 기능 사용법 등을 이해하기 쉬어야 한다
 
 <br/>
 
 
 ### <가독성>
 ***
-
 
 #### 기본 언어 표시
 > 주로 사용하는 언어를 명시해야 함
@@ -433,46 +516,29 @@ e.g. 인증 번호 연장 버튼 등
 
 <br/>
 
-### <콘텐츠의 논리성>
-***
-
-#### 콘텐츠의 선형 구조
-> 콘텐츠는 논리적인 순서로 제공해야 함
-
-1) 탭 콘텐츠
-   > 제목-내용-제목-내용 순서로 마크업 or 내용에 대한 제목을 숨김처리
-2) 더보기 콘텐츠
-   > 제목-내용-더보기 순서
-
-
-<br/>
-
-#### 표의 구성
-> 이해하기 쉽게 구성해야 함 <br/>
-> [참고 사이트](https://worker-k.tistory.com/entry/table-%ED%83%9C%EA%B7%B8-%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-caption-scope-%EC%A4%91%EC%8B%AC%EC%9C%BC%EB%A1%9C)
-
-※ 데이터가 아닌 콘텐츠는 table로 마크업하지 않길 권장 <br/>
-※ scope: 스크린 리더기에서 읽히는 순서에 관여함. thead의 th scope="col"속성부터 읽게 됨.
-
-1) 데이터 테이블
-   > 표에 적절한 *제목과 요약 정보* 제공
-   * scope 속성을 가지고 있는 th 존재
-   * caption 가지고 있음
-   * thead 영역에는 td태그가 올 수 없음
-   * tbody만 사용하거나 thead와 tbody만 있는 경우, thead tbody tfoot은 생략 가능하며 한 테이블에 여러 번 사용해도 상관 없음
-2) 복잡한 테이블
-   > 복잡하지 않은 간단한 표로 제공하거나 scope, id, headers를 적용함
-   * th, caption, scope 사용 안함
-3) 레이아웃 테이블
-   > 디자인을 위한 표는 표로 인식하지 않도록 제목과 요약 내용을 제공하지 않음. <br/>
-   > 만약 table로 제공한 경우, caption(제목)과 summary(표 내부에 대한 설명)를 제공하지 않아야 함
-4) 중첩 테이블
-   > 표의 정보를 이해하기 어려운 중첩 표를 넣어 정보를 제공하지 말 것
+#### 찾기 쉬운 도움 정보
+> 도움 정보가 제공되는 경우, **각 페이지에서 동일한 상대적인 순서로 접근**할 수 있어야 함
 
 <br/>
 
 ### <입력 도움>
 ***
+
+#### 오류 정정
+> 입력 오류를 정정할 수 있는 방법 제공
+
+1. 입력 오류 시 입력 내용이 모두 사라지는 경우
+   > 입력 완료 후나 제출 시 *오류가 발생하면 내용이 사라지지 않고 유지*되도록 제공
+2. 오류 내용 및 정정 수단 제공
+   > 오류의 원인을 알 수 있도록 *적절한 설명 텍스트*를 제공
+   ```html
+   <label for="user_ymd">생년월일<span class="info_txt">형식: yyyy-mm-dd</span></label>
+   <input type="text" id="user_ymd" />
+   ```
+3. 오류 *발생 시점으로 초점 이동*
+   > 오류가 발생한 서식으로 초점 이동
+
+<br/>
 
 #### 레이블 제공
 > 입력에 대응하는 레이블을 제공해야 함
@@ -492,19 +558,15 @@ e.g. 인증 번호 연장 버튼 등
 
 <br/>
 
-#### 오류 정정
-> 입력 오류를 정정할 수 있는 방법 제공
+#### 접근 가능한 인증
+> 인증 과저은 인지 기능 테스트에만 의존해서는 안됨
 
-1. 입력 오류 시 입력 내용이 모두 사라지는 경우
-   > 입력 완료 후나 제출 시 *오류가 발생하면 내용이 사라지지 않고 유지*되도록 제공
-2. 오류 내용 및 정정 수단 제공
-   > 오류의 원인을 알 수 있도록 *적절한 설명 텍스트*를 제공
-   ```html
-   <label for="user_ymd">생년월일<span class="info_txt">형식: yyyy-mm-dd</span></label>
-   <input type="text" id="user_ymd" />
-   ```
-3. 오류 *발생 시점으로 초점 이동*
-   > 오류가 발생한 서식으로 초점 이동
+<br/>
+
+#### 반복 입력 정보
+> 반복되는 입력 정보는 **자동 입력 또는 선택 입력**할 수 있어야 함
+
+- 개인화 설정을 통해 맞춤 설정 가능
 
 <br/>
 
@@ -514,7 +576,7 @@ e.g. 인증 번호 연장 버튼 등
 
 
 ### 견고성
-> 웹 콘텐츠는 미래의 기술로도 접근할 수 있도록 견고하게 만들어야 한다
+> 웹 콘텐츠는 모든 기기 및 브라우저에서 접근/사용이 가능해야 하며, 미래의 기술로도 접근할 수 있도록 견고하게 만들어야 한다
 
 <br/>
 
