@@ -2,7 +2,7 @@
 ## Table of Contents
 1. [1. 인식의 용이성(perceivable)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-인식의-용이성)
    1. [1-1. 대체 텍스트 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-1-대체-텍스트-제공)
-      1. [1-1-1. 적절한 대체 텍스트 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-1-1적절한-대체-텍스트-제공)
+      1. [1-1-1. 적절한 대체 텍스트 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-1-1-적절한-대체-텍스트-제공)
    2. [1-2. 멀티미디어 대체 수단](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-2-멀티미디어-대체-수단)
       1. [1-2-1. 자막 제공](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-2-1-자막-제공)
    3. [1-3. 적응성](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-3-적응성)
@@ -15,7 +15,7 @@
       3. [1-4-3. 텍스트 콘텐츠의 명도 대비](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-4-3-텍스트-콘텐츠의-명도-대비)
       4. [1-4-4. 콘텐츠 간의 구분](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#1-4-4-콘텐츠-간의-구분)
 2. [2. 운용의 용이성(operable)](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#2-운용의-용이성)
-   1. [2-1. 입력장치 접근성](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#2-1입력장치-접근성)
+   1. [2-1. 입력장치 접근성](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#2-1-입력장치-접근성)
       1. [2-1-1. 키보드 사용 보장](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#2-1-1-키보드-사용-보장)
       2. [2-1-2. 초점 이동](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#2-1-2-초점-이동)
       3. [2-1-3. 조작 가능](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/accessibility/WebAccessibility.md#2-1-3-조작-가능)
