@@ -73,6 +73,8 @@
 - 웹 콘텐츠 접근성 지침(WCAG)과 같은 **접근성 표준을 준수**하는 데 도움
 - 다양한 능력을 가진 사용자들이 웹 애플리케이션이나 모바일 앱을 더 쉽게 사용할 수 있도록 **포용성을 강화**함
 
+[참고 사이트1](https://stackoverflow.com/questions/21152716/whats-the-difference-between-setaccessibilitylabel-and-accessibilityidentifier) | [참고 사이트2](https://zeddios.tistory.com/1094)
+
 <br/>
 
 
