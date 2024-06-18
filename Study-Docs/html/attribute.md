@@ -39,12 +39,12 @@ token | note
 ```off``` | 브라우저가 이 필드에 값을 자동으로 넣는 것을 금지 <br/> ※ 단, 브라우저가 저장한 값을 사용해 자동완성을 하거나, 사용자에게 계정 이름, 비밀번호 저장 여부를 묻는 것은 막을 수 없음.
 ```on``` | 브라우저의 자동완성을 허용
 ```name``` | 사람의 전체 이름, 개별 이름 구성 요소보다 해당 태그를 많이 사용하지만 하나씩 받아야 하는 경우라면 아래 값들도 사용 가능 <br/>
-```honorific-prefix```: **호칭** ```Mrs``` ```Mr``` ```Miss``` ```Ms``` ```Dr.``` ```Mlle.``` 등 <br/>
-```family-name```: 성 <br/>
-```given-name```: 이름 <br/>
-```additional-name```: 미들네임 <br/>
-```honorific-suffix```: 접미사, ```Jr.``` ```B.Sc.``` ```PhD.``` ```MBASW``` ```IV``` 등 <br/>
-```nickname```: 별명, 별칭 <br/>
+```honorific-prefix```- **호칭** ```Mrs``` ```Mr``` ```Miss``` ```Ms``` ```Dr.``` ```Mlle.``` 등 <br/>
+```family-name```- 성 <br/>
+```given-name```- 이름 <br/>
+```additional-name```- 미들네임 <br/>
+```honorific-suffix```- 접미사, ```Jr.``` ```B.Sc.``` ```PhD.``` ```MBASW``` ```IV``` 등 <br/>
+```nickname```- 별명, 별칭 <br/>
 ```email``` | 이메일 주소 
 ```username``` | 사용자 또는 계정 이름 
 ```new-password``` | 새로운 비밀번호 
@@ -53,9 +53,9 @@ token | note
 ```organization-title``` | 직위, ```사장``` ```매니저``` 등 
 ```organization``` | 회사 또는 조직명 
 ```street-address``` | 도로 주소  <br/>
-1) 여러 줄 가능 <br/>
-2) 두 번째 행정구역(시/군/구) 내에서 구분할 수 있는 주소 <br/>
-3) 도시 이름, 우편번호, 국가 이름은 포함 불가 <br/>
+여러 줄 가능 <br/>
+두 번째 행정구역(시/군/구) 내에서 구분할 수 있는 주소 <br/>
+도시 이름, 우편번호, 국가 이름은 포함 불가 <br/>
 ```address-line1, address-line2, address-line3``` | 도로 주소의 각 줄, street-address가 존재하지 않는 경우에만 사용
 ```address-level4``` | 4단계 주소에서 가장 상세한 행정구역
 ```address-level3``` | 최소 3단계 주소에서의 3단계 행정구역
