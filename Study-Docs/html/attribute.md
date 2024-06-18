@@ -38,13 +38,7 @@ token | note
 -- | --
 ```off``` | 브라우저가 이 필드에 값을 자동으로 넣는 것을 금지 <br/> ※ 단, 브라우저가 저장한 값을 사용해 자동완성을 하거나, 사용자에게 계정 이름, 비밀번호 저장 여부를 묻는 것은 막을 수 없음.
 ```on``` | 브라우저의 자동완성을 허용
-```name``` | 사람의 전체 이름, 개별 이름 구성 요소보다 해당 태그를 많이 사용하지만 하나씩 받아야 하는 경우라면 아래 값들도 사용 가능 <br/>
-```honorific-prefix```- **호칭** ```Mrs``` ```Mr``` ```Miss``` ```Ms``` ```Dr.``` ```Mlle.``` 등 <br/>
-```family-name```- 성 <br/>
-```given-name```- 이름 <br/>
-```additional-name```- 미들네임 <br/>
-```honorific-suffix```- 접미사, ```Jr.``` ```B.Sc.``` ```PhD.``` ```MBASW``` ```IV``` 등 <br/>
-```nickname```- 별명, 별칭 <br/>
+```name``` | 사람의 전체 이름, 개별 이름 구성 요소보다 해당 태그를 많이 사용하지만 하나씩 받아야 하는 경우라면 아래 값들도 사용 가능 <br/>```honorific-prefix```- **호칭** ```Mrs``` ```Mr``` ```Miss``` ```Ms``` ```Dr.``` ```Mlle.``` 등 <br/>```family-name```- 성 <br/>```given-name```- 이름 <br/>```additional-name```- 미들네임 <br/>```honorific-suffix```- 접미사, ```Jr.``` ```B.Sc.``` ```PhD.``` ```MBASW``` ```IV``` 등 <br/>```nickname```- 별명, 별칭 <br/>
 ```email``` | 이메일 주소 
 ```username``` | 사용자 또는 계정 이름 
 ```new-password``` | 새로운 비밀번호 
@@ -52,10 +46,7 @@ token | note
 ```one-time-code``` | 사용자를 인증할 때 사용하는 1회성 코드
 ```organization-title``` | 직위, ```사장``` ```매니저``` 등 
 ```organization``` | 회사 또는 조직명 
-```street-address``` | 도로 주소  <br/>
-여러 줄 가능 <br/>
-두 번째 행정구역(시/군/구) 내에서 구분할 수 있는 주소 <br/>
-도시 이름, 우편번호, 국가 이름은 포함 불가 <br/>
+```street-address``` | 도로 주소  <br/>1. 여러 줄 가능 <br/>2. 두 번째 행정구역(시/군/구) 내에서 구분할 수 있는 주소 <br/>3. 도시 이름, 우편번호, 국가 이름은 포함 불가 <br/>
 ```address-line1, address-line2, address-line3``` | 도로 주소의 각 줄, street-address가 존재하지 않는 경우에만 사용
 ```address-level4``` | 4단계 주소에서 가장 상세한 행정구역
 ```address-level3``` | 최소 3단계 주소에서의 3단계 행정구역
@@ -82,11 +73,7 @@ token | note
 ```bday-month``` | 생월
 ```bday-year``` | 생년
 ```sex``` | 성별 (줄바꿈 없는 자유형식 텍스트)
-```tel``` | 국가 코드를 포함한 전체 전화번호, 개별 전화번호 구성요소가 필요한 경우, 아래 값 사용 가능 <br/>
-```tel-country-code```: 국가 코드(1-북미, 82-대한민국 등) <br/>
-```tel-national``` | 국가 코드를 제외한 전체 전화번호. 지역번호도 포함 e.g. 82-2-555-6502 > *02-555-6502* <br/>
-```tel-area-code``` | 지역번호 <br/>
-```tel-local``` | 국가 코드와 지역번호를 제외한 전화번호 e.g. 555-6502 > ```tel-local-prefix```: 555, ```tel-local-suffix```: 6502 <br/>
+```tel``` | 국가 코드를 포함한 전체 전화번호, 개별 전화번호 구성요소가 필요한 경우, 아래 값 사용 가능 <br/>```tel-country-code```: 국가 코드(1-북미, 82-대한민국 등) <br/>```tel-national``` : 국가 코드를 제외한 전체 전화번호. 지역번호도 포함 e.g. 82-2-555-6502 > *02-555-6502* <br/>```tel-area-code``` : 지역번호 <br/>```tel-local``` : 국가 코드와 지역번호를 제외한 전화번호 e.g. 555-6502 > ```tel-local-prefix```: 555, ```tel-local-suffix```: 6502 <br/>
 ```tel-extension``` | 내선번호
 ```impp``` | 인스턴트 메시지 프로토콜 엔드포인트의 URL
 ```url``` | URL (홈페이지, 회사 웹사이트 주소 등)
