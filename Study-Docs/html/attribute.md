@@ -45,17 +45,17 @@ token | note
 ```additional-name```: 미들네임 <br/>
 ```honorific-suffix```: 접미사, ```Jr.``` ```B.Sc.``` ```PhD.``` ```MBASW``` ```IV``` 등 <br/>
 ```nickname```: 별명, 별칭 <br/>
-```email``` | 이메일 주소 <br/>
-```username``` | 사용자 또는 계정 이름 <br/>
-```new-password``` | 새로운 비밀번호 <br/>
-```current-password``` | 사용자의 현재 비밀번호 <br/>
-```one-time-code``` | 사용자를 인증할 때 사용하는 1회성 코드 <br/>
-```organization-title``` | 직위, ```사장``` ```매니저``` 등 <br/>
-```organization``` | 회사 또는 조직명 <br/>
-```street-address``` | 도로 주소 
-1. 여러 줄 가능
-2. 두 번째 행정구역(시/군/구) 내에서 구분할 수 있는 주소
-3. 도시 이름, 우편번호, 국가 이름은 포함 불가
+```email``` | 이메일 주소 
+```username``` | 사용자 또는 계정 이름 
+```new-password``` | 새로운 비밀번호 
+```current-password``` | 사용자의 현재 비밀번호
+```one-time-code``` | 사용자를 인증할 때 사용하는 1회성 코드
+```organization-title``` | 직위, ```사장``` ```매니저``` 등 
+```organization``` | 회사 또는 조직명 
+```street-address``` | 도로 주소  <br/>
+1) 여러 줄 가능 <br/>
+2) 두 번째 행정구역(시/군/구) 내에서 구분할 수 있는 주소 <br/>
+3) 도시 이름, 우편번호, 국가 이름은 포함 불가 <br/>
 ```address-line1, address-line2, address-line3``` | 도로 주소의 각 줄, street-address가 존재하지 않는 경우에만 사용
 ```address-level4``` | 4단계 주소에서 가장 상세한 행정구역
 ```address-level3``` | 최소 3단계 주소에서의 3단계 행정구역
