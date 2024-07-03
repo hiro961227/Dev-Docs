@@ -85,10 +85,12 @@ json파일에 gnb_data라는 데이터 태그가 존재하는 가정 하 아래 
     </ul>
 
     <!-- or -->
-    
-    {% for item in gnb_data %}
-    <li>{{loop.index}}. {{item.name}}</li>
-    {% endfor %}
+        
+    <ul>
+        {% for item in gnb_data %}
+        <li>{{loop.index}}. {{item.name}}</li>
+        {% endfor %}
+    </ul>
 ```
 
 ```html
