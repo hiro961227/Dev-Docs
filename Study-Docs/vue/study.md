@@ -40,7 +40,7 @@
 
 1. 제한된 사용: ```template``` ```컴포넌트```(props를 수신할 기본 슬롯만 있는 경우)
 
-```vue3
+```vue
 <!-- 이름이 있는 슬롯 -->
 <BaseLayout>
   <template v-slot:header>
