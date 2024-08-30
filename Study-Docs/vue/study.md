@@ -74,6 +74,56 @@
 ***
 
 
+## ref
+> **상태 관리** | 단일 원시 값(primitive value) 또는 객체를 **반응형으로 만들 때** 사용, 원시 값(숫자, 문자열, boolean 등)에 이용됨
+
+1. 단일 값에 적합 - **원시 값**이나 **단일 객체**를 반응형으로 만들 때 유용
+2. ```.value``` 접근: ref로 생성된 반응형 변수는 .value를 통해 접근하고 수정 가능
+3. 자동 언래핑: ref가 템플릿에서 사용될 때는 .value를 명시적으로 사용하지 않아도 됨, 객체 내부까지 추적하지 않음
+
+```vue
+<script setup>
+import { ref } from 'vue';
+
+const count = ref(0);
+
+const increment = () => {
+  count.value++;  // ref 사용 시 .value를 통해 값에 접근합니다.
+};
+</script>
+```
+
+***
+
+
+
+## reactive 
+> **상태 관리** | 객체를 **반응형으로 변환**하는 데 사용
+> *객체 내부의 모든 속성을 추적하여 반응형으로 만들어 줌*
+
+1. 객체에 적합 - **여러 속성**을 가진 객체를 반응형으로 만들 때 유용
+2. **속성에 직접 접근** - .value 없이 접근 가능
+3. 깊은 반응성: **객체 내부의 모든 속성과 중첩된 객체**까지도 자동으로 반응형으로 변환
+
+```vue
+<script setup>
+import { reactive } from 'vue';
+
+const state = reactive({
+  count: 0,
+  message: 'Hello, Vue!'
+});
+
+const increment = () => {
+  state.count++;  // .value 없이 객체 속성에 직접 접근
+};
+</script>
+```
+
+
+***
+
+
 
 ## props (소품)
 > 부모 -> 자식 데이터 전달 [하향식 단방향 바인딩] | 자식 component가 실수로 데이터를 변경해 부모 component의 상태를 변경하는 것을 방지 <br>
