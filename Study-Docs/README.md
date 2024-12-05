@@ -12,5 +12,5 @@
      2. [sass](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/css/sass)
 3. [html](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/html)
      1. [attribute](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/html/attribute.md)
-4. [gulp](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/html](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/gulp/history.md)
-5. [vue3](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/html](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/vue/study.md)
+4. [gulp](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/gulp/history.md)
+5. [vue3](https://github.com/hiro961227/Dev-Docs/blob/main/Study-Docs/vue/study.md)
