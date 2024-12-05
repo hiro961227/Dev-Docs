@@ -124,3 +124,23 @@ $iconRadius: 0.8rem;
 ```
 <br><br>
 
+## ```map```, ```list```사용시 선언
+
+모듈 네임스페이스를 사용하는 경우, ```@use```를 사용하여 선언한 후 사용해야 한다.
+
+**예시**
+```sass
+@use 'sass:list';
+@use 'sass:map';
+
+$colors: ('red', 'blue', 'green');
+$theme-colors: (
+  primary: #007bff,
+  secondary: #6c757d,
+);
+
+.example {
+  color: list.nth($colors, 1); // 'red'
+  background-color: map.get($theme-colors, primary); // '#007bff'
+}
+```
